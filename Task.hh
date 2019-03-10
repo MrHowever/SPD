@@ -9,7 +9,10 @@
 
 class Task {
 public:
+    int taskID;
     std::vector<int> machineTime;
+
+    Task(int id) : taskID(id) {}
 };
 
 

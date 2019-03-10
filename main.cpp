@@ -3,9 +3,9 @@
 
 int main()
 {
-    std::vector<int> vec1 = {4,7,1};
-    std::vector<int> vec2 = {9,2,3};
-    std::vector<int> vec3 = {5,2,6};
+    std::vector<int> vec1 = {4,7};
+    std::vector<int> vec2 = {9,2};
+    std::vector<int> vec3 = {5,2};
 
     std::vector<std::vector<int> > input;
     input.push_back(vec1);
@@ -24,12 +24,17 @@ int main()
         std::cout<<std::endl;
     }
 
+    controller.johnsonOrder();
+
+    /*
     std::vector<int> order = {2,1,0};
 
     controller.calculateTask(order);
 
     for(std::vector<Machine>::size_type i = 0; i < controller.machines.size(); i++)
         std::cout<<"Machine "<<i<<": Time = "<<controller.machines[i].timePassed<<std::endl;
+*/
+
 
     return 0;
 }

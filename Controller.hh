@@ -8,15 +8,23 @@
 #include <vector>
 #include "Machine.hh"
 #include "Task.hh"
+#include "Scheduler.hh"
 
 class Controller {
+
+    Scheduler scheduler;
+
 public:
 
     Controller(std::vector<std::vector<int> >);
-    void calculateTask(std::vector<int>);
+    int calculateTask(std::vector<int>);
+    void johnsonOrder();
+    void permutationOrder();
+    void resetMachines();
 
     std::vector<Machine> machines;
     std::vector<Task> tasks;
+
 };
 
 
