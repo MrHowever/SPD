@@ -23,7 +23,28 @@ std::vector<std::vector<int> > Scheduler::permutations(int machineCount)
     return permutationVec;
 }
 
-std::vector<int> Scheduler::johnsonsRule(std::vector<Task> tasks)
+std::vector<int> Scheduler::johnsonsRule(std::vector<Task>& tasks)
+{
+    if(tasks[0].machineTime.size() > 3)
+        std::cerr<<"Invalid number of machines\n";
+
+    std::vector<int> order = tasks.size() == 2 ? johnsonsRule2(tasks) : johnsonsRule3(tasks);
+    return order;
+}
+
+std::vector<int> Scheduler::johnsonsRule3(std::vector<Task> tasks)
+{
+    for(auto& task : tasks)
+    {
+        task.machineTime[0] = task.machineTime[0] + task.machineTime[1];
+        task.machineTime[1] = task.machineTime[1] + task.machineTime[2];
+        task.machineTime.erase(task.machineTime.begin() + 2);
+    }
+
+    return johnsonsRule2(tasks);
+}
+
+std::vector<int> Scheduler::johnsonsRule2(std::vector<Task> tasks)
 {
     std::vector<int> order(tasks.size());
     std::vector<int>::iterator front = order.begin();

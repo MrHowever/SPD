@@ -11,7 +11,9 @@
 class Scheduler {
 public:
     std::vector<std::vector<int> > permutations(int);
-    std::vector<int> johnsonsRule(std::vector<Task>);
+    std::vector<int> johnsonsRule(std::vector<Task>&);
+    std::vector<int> johnsonsRule2(std::vector<Task>);
+    std::vector<int> johnsonsRule3(std::vector<Task>);
 };
 
 

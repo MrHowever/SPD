@@ -3,14 +3,17 @@
 
 int main()
 {
-    std::vector<int> vec1 = {4,7};
-    std::vector<int> vec2 = {9,2};
-    std::vector<int> vec3 = {5,2};
+    std::vector<int> vec1 = {5,5,3};
+    std::vector<int> vec2 = {4,5,2};
+    std::vector<int> vec3 = {4,4,5};
+    std::vector<int> vec4 = {3,5,7};
+
 
     std::vector<std::vector<int> > input;
     input.push_back(vec1);
     input.push_back(vec2);
     input.push_back(vec3);
+    input.push_back(vec4);
 
     Controller controller(input);
 
