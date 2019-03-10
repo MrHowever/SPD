@@ -17,6 +17,7 @@ class Controller {
 public:
 
     Controller(std::vector<std::vector<int> >);
+    Controller(unsigned int, unsigned int);
     int calculateTask(std::vector<int>);
     void johnsonOrder();
     void permutationOrder();

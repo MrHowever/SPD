@@ -3,6 +3,7 @@
 
 int main()
 {
+    /*
     std::vector<int> vec1 = {5,5,3};
     std::vector<int> vec2 = {4,5,2};
     std::vector<int> vec3 = {4,4,5};
@@ -16,6 +17,8 @@ int main()
     input.push_back(vec4);
 
     Controller controller(input);
+*/
+    Controller controller(3,10);
 
     std::cout<<"Tasks = "<<controller.tasks.size()<<", Machines = "<<controller.machines.size()<<std::endl;
 

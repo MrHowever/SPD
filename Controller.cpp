@@ -5,6 +5,7 @@
 #include "Controller.hh"
 #include "Scheduler.hh"
 #include <iostream>
+#include <random>
 
 Controller::Controller(std::vector<std::vector<int> > input)
 {
@@ -16,6 +17,22 @@ Controller::Controller(std::vector<std::vector<int> > input)
 
     for(int i = 0; i < input[0].size(); i++)
         machines.push_back(Machine());
+}
+
+Controller::Controller(unsigned int machineCount, unsigned int taskCount)
+{
+    std::random_device rd;
+    std::mt19937_64 generator(rd());
+    std::uniform_int_distribution<> distribution(1,10);
+
+    machines = std::vector<Machine>(machineCount);
+
+    for(unsigned int i = 0; i < taskCount; i++) {
+        tasks.push_back(Task(i));
+        for (unsigned int j = 0; j < machineCount; j++) {
+            tasks.back().machineTime.push_back(distribution(generator));
+        }
+    }
 }
 
 int Controller::calculateTask(std::vector<int> order)
