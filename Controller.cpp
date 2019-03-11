@@ -98,7 +98,7 @@ void Controller::resetMachines()
         machine.timePassed = 0;
 }
 
-void Controller::permutationOrder()
+std::vector<std::vector<int> > Controller::permutationOrder()
 {
     std::vector<std::vector<int> > permutation = scheduler.permutations(tasks.size());
     int cmax;
@@ -113,17 +113,14 @@ void Controller::permutationOrder()
         std::cout<<"],   Cmax = "<<cmax<<std::endl;
         resetMachines();
     }
+
+    return permutation;
 }
 
-void Controller::johnsonOrder()
+std::vector<int> Controller::johnsonOrder()
 {
     std::vector<int> order = scheduler.johnsonsRule(tasks);
-
-    std::cout << "Order: [";
-    for (auto& val : order) {
-        std::cout<<val<<" ";
-    }
-
-    std::cout<<"],   Cmax = "<<calculateTask(order)<<std::endl;
     resetMachines();
+
+    return order;
 }

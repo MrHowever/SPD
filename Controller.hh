@@ -25,8 +25,8 @@ public:
     Controller(std::string);
 
     int calculateTask(std::vector<int>);
-    void johnsonOrder();
-    void permutationOrder();
+    std::vector<int> johnsonOrder();
+    std::vector<std::vector<int> > permutationOrder();
     void resetMachines();
 
     std::vector<Machine> machines;

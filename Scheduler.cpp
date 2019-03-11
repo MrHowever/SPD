@@ -25,10 +25,14 @@ std::vector<std::vector<int> > Scheduler::permutations(int taskCount)
 
 std::vector<int> Scheduler::johnsonsRule(std::vector<Task>& tasks)
 {
-    if(tasks[0].machineTime.size() > 3)
-        std::cerr<<"Invalid number of machines\n";
+    if(tasks[0].machineTime.size() > 3) {
+        std::cerr << "Invalid number of machines\n";
+        throw std::string("wtf");
+    }
 
-    std::vector<int> order = tasks.size() == 2 ? johnsonsRule2(tasks) : johnsonsRule3(tasks);
+    std::vector<int> order = tasks[0].machineTime.size() == 2 ? johnsonsRule2(tasks) : johnsonsRule3(tasks);
+
+
     return order;
 }
 
