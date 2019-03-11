@@ -4,6 +4,7 @@
 #include <string>
 #include <random>
 
+//Funkcja wypisujaca do pliku wyniki testow zasady Johnsona dla losowych danych wejsciowych
 void printTest(std::ofstream& file, unsigned int machines, unsigned int tests)
 {
     std::random_device rd;
@@ -29,6 +30,7 @@ void printTest(std::ofstream& file, unsigned int machines, unsigned int tests)
     }
 }
 
+//Funkcja wypisujaca do pliku wyniki testow permutacji dla losowych danych wejsciowych
 void printPermTest(std::ofstream& file, unsigned int tests)
 {
     std::random_device rd;
@@ -54,6 +56,7 @@ void printPermTest(std::ofstream& file, unsigned int tests)
     }
 }
 
+//Funkcja wypisujaca do pliku wyniki testow zasady Johnsona i permutacji dla danych wejsciowych z pliku
 void readTest(std::string filename)
 {
     Controller controller(filename);
