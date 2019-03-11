@@ -103,6 +103,7 @@ std::vector<std::vector<int> > Controller::permutationOrder()
     std::vector<std::vector<int> > permutation = scheduler.permutations(tasks.size());
     int cmax;
 
+    /*
     for(auto& perm : permutation) {
         std::cout << "Order: [";
         for (auto& val : perm) {
@@ -113,7 +114,7 @@ std::vector<std::vector<int> > Controller::permutationOrder()
         std::cout<<"],   Cmax = "<<cmax<<std::endl;
         resetMachines();
     }
-
+*/
     return permutation;
 }
 
