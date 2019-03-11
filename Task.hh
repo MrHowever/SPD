@@ -7,6 +7,9 @@
 
 #include <vector>
 
+//Podstawowa klasa zadania, posiada pole z identyfikatorem danego zadania oraz
+//wektor czasow wykonania na poszczegolnych maszynach
+
 class Task {
 public:
     int taskID;

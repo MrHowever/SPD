@@ -10,24 +10,33 @@
 #include "Task.hh"
 #include "Scheduler.hh"
 #include <string>
+#include <iostream>
+
+typedef std::vector<std::vector<int> > DataArray;
+typedef std::vector<int> Order;
+
+//Glowna klasa zarzadzajaca pobieraniem/generacja danych i obliczaniem czasow wykonania dla
+//otrzymanych kolejnosci
 
 class Controller {
 
     Scheduler scheduler;
 
-    void init(std::vector<std::vector<int> >);
-    std::vector<std::vector<int> > readFile(std::string);
+    void init(DataArray);
+    DataArray readFile(std::string);
 
 public:
 
-    Controller(std::vector<std::vector<int> >);
+    Controller(DataArray);
     Controller(unsigned int, unsigned int);
     Controller(std::string);
 
-    int calculateTask(std::vector<int>);
-    std::vector<int> johnsonOrder();
-    std::vector<std::vector<int> > permutationOrder();
+    int calculateTask(Order);
+    Order johnsonOrder();
+    std::vector<Order> permutationOrder();
     void resetMachines();
+    void printData(std::ostream&);
+    void printOrder(std::ostream&, Order);
 
     std::vector<Machine> machines;
     std::vector<Task> tasks;

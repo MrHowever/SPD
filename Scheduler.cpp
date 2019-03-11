@@ -9,10 +9,11 @@
 #include <limits>
 #include <iostream>
 
-std::vector<std::vector<int> > Scheduler::permutations(int taskCount)
+//Funkcja zwracajaca wektor wszystkich permutacji kolejnosci zadan dla ilosci zadan podanej jako parametr
+std::vector<Order> Scheduler::permutations(int taskCount)
 {
     std::vector<int> indices(taskCount);
-    std::vector<std::vector<int> > permutationVec;
+    std::vector<Order> permutationVec;
 
     std::iota(indices.begin(),indices.end(),0);
 
@@ -23,20 +24,21 @@ std::vector<std::vector<int> > Scheduler::permutations(int taskCount)
     return permutationVec;
 }
 
-std::vector<int> Scheduler::johnsonsRule(std::vector<Task>& tasks)
+//Funkcja zwracajaca kolejnosc wykonania zadan zgodnie z zasada Johnsona
+Order Scheduler::johnsonsRule(std::vector<Task>& tasks)
 {
     if(tasks[0].machineTime.size() > 3) {
         std::cerr << "Invalid number of machines\n";
-        throw std::string("wtf");
+        return std::vector<int>();
     }
 
-    std::vector<int> order = tasks[0].machineTime.size() == 2 ? johnsonsRule2(tasks) : johnsonsRule3(tasks);
-
+    Order order = tasks[0].machineTime.size() == 2 ? johnsonsRule2(tasks) : johnsonsRule3(tasks);
 
     return order;
 }
 
-std::vector<int> Scheduler::johnsonsRule3(std::vector<Task> tasks)
+//Funkcja zwracajaca kolejnosc wykonania zadan zgodnie z regula Johnsona dla 3 maszyn
+Order Scheduler::johnsonsRule3(std::vector<Task> tasks)
 {
     for(auto& task : tasks)
     {
@@ -48,9 +50,10 @@ std::vector<int> Scheduler::johnsonsRule3(std::vector<Task> tasks)
     return johnsonsRule2(tasks);
 }
 
-std::vector<int> Scheduler::johnsonsRule2(std::vector<Task> tasks)
+//Funkcja zwracajaca kolejnosc wykonania zadan zgodnie z regula Johnsona dla 2 maszyn
+Order Scheduler::johnsonsRule2(std::vector<Task> tasks)
 {
-    std::vector<int> order(tasks.size());
+    Order order(tasks.size());
     std::vector<int>::iterator front = order.begin();
     std::vector<int>::reverse_iterator back = order.rbegin();
     int shortestTime = std::numeric_limits<int>::max();

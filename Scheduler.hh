@@ -8,12 +8,16 @@
 #include <vector>
 #include "Task.hh"
 
+typedef std::vector<int> Order;
+
+//Klasa obliczajaca kolejnosc zadan zgodnie z regula Johnsona lub wszystkie permutacje zadan
+
 class Scheduler {
 public:
-    std::vector<std::vector<int> > permutations(int);
-    std::vector<int> johnsonsRule(std::vector<Task>&);
-    std::vector<int> johnsonsRule2(std::vector<Task>);
-    std::vector<int> johnsonsRule3(std::vector<Task>);
+    std::vector<Order> permutations(int);
+    Order johnsonsRule(std::vector<Task>&);
+    Order johnsonsRule2(std::vector<Task>);
+    Order johnsonsRule3(std::vector<Task>);
 };
 
 

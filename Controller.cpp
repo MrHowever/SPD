@@ -9,23 +9,25 @@
 #include <string>
 #include <fstream>
 
-
-Controller::Controller(std::vector<std::vector<int> > input)
+//Konstruktor odczytujacy dane z wektorow
+Controller::Controller(DataArray input)
 {
     init(input);
 }
 
+//Konstruktor odczytujacy dane z pliku
 Controller::Controller(std::string filename)
 {
     init(readFile(filename));
 }
 
-std::vector<std::vector<int> > Controller::readFile(std::string filename)
+//Funkcja czytajaca plik w formacie takim jak ta000
+DataArray Controller::readFile(std::string filename)
 {
     std::ifstream file(filename);
     int taskCount, machineCount,val;
     std::vector<int> machineTime;
-    std::vector<std::vector<int> > input;
+    DataArray input;
 
     file>>taskCount>>machineCount;
 
@@ -45,10 +47,10 @@ std::vector<std::vector<int> > Controller::readFile(std::string filename)
     return input;
 }
 
-void Controller::init(std::vector<std::vector<int> > input)
+//Funkcja wypelniajaca wektory zadan i maszyn podanymi jako parametr wartosciami
+void Controller::init(DataArray input)
 {
-    for(std::vector<int>::size_type i = 0; i < input.size(); i++)
-    {
+    for(std::vector<int>::size_type i = 0; i < input.size(); i++) {
         tasks.push_back(Task(i));
         tasks[i].machineTime = input[i];
     }
@@ -57,6 +59,7 @@ void Controller::init(std::vector<std::vector<int> > input)
         machines.push_back(Machine());
 }
 
+//Konstruktor tworzacy zadana ilosc maszyn i zadan z losowym czasem wykonania
 Controller::Controller(unsigned int machineCount, unsigned int taskCount)
 {
     std::random_device rd;
@@ -73,7 +76,8 @@ Controller::Controller(unsigned int machineCount, unsigned int taskCount)
     }
 }
 
-int Controller::calculateTask(std::vector<int> order)
+//Funkcja obliczajaca czas wykonania zadan Cmax dla podanej jako parametr kolejnosci
+int Controller::calculateTask(Order order)
 {
     for(std::vector<int>::size_type i = 0; i < tasks.size(); i++)
     {
@@ -92,36 +96,48 @@ int Controller::calculateTask(std::vector<int> order)
     return machines.back().timePassed;
 }
 
+//Funkcja resetujaca czas zliczony na wszystkich maszynach, by kolejne obliczenia czasu na tych samych maszynach
+//sie nie kumulowaly
 void Controller::resetMachines()
 {
     for(auto& machine : machines)
         machine.timePassed = 0;
 }
 
-std::vector<std::vector<int> > Controller::permutationOrder()
+//Funkcja zwracajaca wszystkie mozliwe permutacje kolejnosci zadan
+std::vector<Order> Controller::permutationOrder()
 {
-    std::vector<std::vector<int> > permutation = scheduler.permutations(tasks.size());
-    int cmax;
-
-    /*
-    for(auto& perm : permutation) {
-        std::cout << "Order: [";
-        for (auto& val : perm) {
-            std::cout<<val<<" ";
-        }
-
-        cmax = calculateTask(perm);
-        std::cout<<"],   Cmax = "<<cmax<<std::endl;
-        resetMachines();
-    }
-*/
-    return permutation;
+    return scheduler.permutations(tasks.size());
 }
 
-std::vector<int> Controller::johnsonOrder()
+//Funkcja zwracajaca kolejnosc zadan wg zasady Johnsona
+Order Controller::johnsonOrder()
 {
-    std::vector<int> order = scheduler.johnsonsRule(tasks);
-    resetMachines();
+    return scheduler.johnsonsRule(tasks);
+}
 
-    return order;
+//Funkcja drukujaca ilosc zadan, maszyn oraz czasy wkonania poszczegolnych zadan na danych maszynach
+void Controller::printData(std::ostream& file)
+{
+    file << "Tasks: " <<tasks.size() <<", Machines: "<<machines.size() << "\n";
+
+    for(int j = 0; j <tasks.size(); j++) {
+        file  << "Task "<< j <<": ";
+        for (int k = 0; k < tasks[j].machineTime.size(); k++) {
+            file << tasks[j].machineTime[k] << " ";
+        }
+
+        file << "\n";
+    }
+}
+
+//Funkcja drukujaca przekazana jako parametr kolejnosc zadan oraz obliczony dla niej czas wykonania
+void Controller::printOrder(std::ostream& file, Order order)
+{
+    file<<"[";
+    for(int i = 0; i < order.size(); i++)
+        file<<order[i]<<" ";
+    file<<"] , Cmax = "<<calculateTask(order);
+
+    resetMachines();
 }

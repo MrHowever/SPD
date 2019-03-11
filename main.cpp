@@ -4,12 +4,12 @@
 #include <string>
 #include <random>
 
-void printTest(std::ofstream& file, unsigned int machines, int tests)
+void printTest(std::ofstream& file, unsigned int machines, unsigned int tests)
 {
     std::random_device rd;
     std::mt19937_64 generator(rd());
-    std::uniform_int_distribution<> distribution(1,10);
-    std::vector<int> order;
+    std::uniform_int_distribution<> distribution(2,10);
+    Order order;
 
     if(machines > 3 ) {
         std::cerr << "Invalid machine count in test function!\n";
@@ -20,27 +20,62 @@ void printTest(std::ofstream& file, unsigned int machines, int tests)
     {
         Controller controller(machines,distribution(generator));
 
-        file << "Tasks: " <<controller.tasks.size() <<", Machines: "<< controller.machines.size() << "\n";
-
-        for(int j = 0; j < controller.tasks.size(); j++) {
-            file  << "Task "<< j <<": ";
-            for (int k = 0; k < controller.tasks[j].machineTime.size(); k++) {
-                file << controller.tasks[j].machineTime[k] << " ";
-            }
-
-            file << "\n";
-        }
+        controller.printData(file);
 
         order = controller.johnsonOrder();
-        file << "Johnsons order: [";
-        for (auto& val : order) {
-            file<<val<<" ";
-        }
+        file << "Johnsons order:\n";
+        controller.printOrder(file,order);
+        file << "\n\n\n";
+    }
+}
 
-        file<< "] \nCmax = "<<controller.calculateTask(order);
+void printPermTest(std::ofstream& file, unsigned int tests)
+{
+    std::random_device rd;
+    std::mt19937_64 generator(rd());
+    std::uniform_int_distribution<> distribution(2,5);
+    std::vector<Order> order;
+    Order ord;
+
+    for(int i = 0; i < 3; i++)
+    {
+        Controller controller(distribution(generator),distribution(generator));
+
+        controller.printData(file);
+
+        order = controller.permutationOrder();
+        file << "Permutation order:\n";
+
+        for(int m = 0; m < order.size(); m++) {
+            controller.printOrder(file,order[m]);
+        }
 
         file << "\n\n\n";
     }
+}
+
+void readTest(std::string filename)
+{
+    Controller controller(filename);
+    Order ord;
+    std::vector<Order> order;
+
+    std::cout<<"Reading file: "<<filename<<std::endl;
+
+    controller.printData(std::cout);
+
+    ord = controller.johnsonOrder();
+    std::cout<<"Johnson order: [";
+    controller.printOrder(std::cout,ord);
+
+    order = controller.permutationOrder();
+    std::cout << "\nPermutation order:\n";
+
+    for(int m = 0; m < order.size(); m++) {
+       controller.printOrder(std::cout,order[m]);
+    }
+
+    std::cout << "\n\n\n";
 }
 
 int main()
@@ -51,73 +86,8 @@ int main()
 
     printTest(file1,2,3);
     printTest(file2,3,3);
-
-    std::random_device rd;
-    std::mt19937_64 generator(rd());
-    std::uniform_int_distribution<> distribution(1,5);
-    std::vector<std::vector<int> > order;
-    std::vector<int> ord;
-
-    for(int i = 0; i < 3; i++)
-    {
-        Controller controller(distribution(generator),distribution(generator));
-
-        file3 << "Tasks: " <<controller.tasks.size() <<", Machines: "<< controller.machines.size() << "\n";
-
-        for(int j = 0; j < controller.tasks.size(); j++) {
-            file3  << "Task "<< j <<": ";
-            for (int k = 0; k < controller.tasks[j].machineTime.size(); k++) {
-                file3 << controller.tasks[j].machineTime[k] << " ";
-            }
-
-            file3 << "\n";
-        }
-
-        order = controller.permutationOrder();
-        file3 << "Permutation order:\n";
-
-        for(int m = 0; m < order.size(); m++) {
-            file3 << "[";
-            for (auto &val : order[m]) {
-                file3 << val << " ";
-            }
-
-            file3 << "] Cmax = " << controller.calculateTask(order[m]) << "\n";
-            controller.resetMachines();
-        }
-        file3 << "\n\n\n";
-    }
-
-    std::string filename = "ta000";
-    std::cout<<"Reading file: "<<filename<<std::endl;
-    Controller controller2(filename);
-
-    std::cout<<"Tasks = "<<controller2.tasks.size()<<", Machines = "<<controller2.machines.size()<<std::endl;
-    for(int i = 0; i < controller2.tasks.size(); i++)
-    {
-        std::cout<<"Task "<<i<<": ";
-        for (int j = 0; j < controller2.machines.size(); j++)
-            std::cout <<controller2.tasks[i].machineTime[j]<<", ";
-        std::cout<<std::endl;
-    }
-
-    ord = controller2.johnsonOrder();
-
-    std::cout<<"Order: [";
-    for(int i = 0; i < ord.size(); i++)
-        std::cout<<ord[i]<<" ";
-    std::cout<<"] , Cmax = "<<controller2.calculateTask(ord);
-
-    order = controller2.permutationOrder();
-/*
-    for(int j = 0; j < order.size(); j++) {
-        std::cout << "Order: [";
-        for (int i = 0; i < order[j].size(); i++)
-            std::cout << order[i][j] << " ";
-        std::cout << "] , Cmax = " << controller2.calculateTask(order[j]);
-        controller2.resetMachines();
-    }*/
-
+    printPermTest(file3,3);
+    readTest(std::string("ta000"));
 
     return 0;
 }

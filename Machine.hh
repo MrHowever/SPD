@@ -5,7 +5,8 @@
 #ifndef SPD1_MACHINE_HH
 #define SPD1_MACHINE_HH
 
-#include <vector>
+//Podstawowa klasa symulujaca maszyne, posiada jedynie jedno pole ktore przechowuje informacje
+//o czasie ktory dotychczas uplynal
 
 class Machine {
 public:
