@@ -9,15 +9,21 @@
 #include "Machine.hh"
 #include "Task.hh"
 #include "Scheduler.hh"
+#include <string>
 
 class Controller {
 
     Scheduler scheduler;
 
+    void init(std::vector<std::vector<int> >);
+    std::vector<std::vector<int> > readFile(std::string);
+
 public:
 
     Controller(std::vector<std::vector<int> >);
     Controller(unsigned int, unsigned int);
+    Controller(std::string);
+
     int calculateTask(std::vector<int>);
     void johnsonOrder();
     void permutationOrder();

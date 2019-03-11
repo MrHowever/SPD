@@ -6,8 +6,46 @@
 #include "Scheduler.hh"
 #include <iostream>
 #include <random>
+#include <string>
+#include <fstream>
+
 
 Controller::Controller(std::vector<std::vector<int> > input)
+{
+    init(input);
+}
+
+Controller::Controller(std::string filename)
+{
+    init(readFile(filename));
+}
+
+std::vector<std::vector<int> > Controller::readFile(std::string filename)
+{
+    std::ifstream file(filename);
+    int taskCount, machineCount,val;
+    std::vector<int> machineTime;
+    std::vector<std::vector<int> > input;
+
+    file>>taskCount>>machineCount;
+
+    for(int i = 0; i < taskCount; i++) {
+        for (int j = 0; j < machineCount; j++) {
+            if(!(file >> val)) {
+                std::cerr << "Invalid file format\n" << std::endl;
+            }
+
+            machineTime.push_back(val);
+        }
+
+        input.push_back(machineTime);
+        machineTime.clear();
+    }
+
+    return input;
+}
+
+void Controller::init(std::vector<std::vector<int> > input)
 {
     for(std::vector<int>::size_type i = 0; i < input.size(); i++)
     {
@@ -62,7 +100,7 @@ void Controller::resetMachines()
 
 void Controller::permutationOrder()
 {
-    std::vector<std::vector<int> > permutation = scheduler.permutations(machines.size());
+    std::vector<std::vector<int> > permutation = scheduler.permutations(tasks.size());
     int cmax;
 
     for(auto& perm : permutation) {

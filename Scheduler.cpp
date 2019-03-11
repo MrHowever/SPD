@@ -9,9 +9,9 @@
 #include <limits>
 #include <iostream>
 
-std::vector<std::vector<int> > Scheduler::permutations(int machineCount)
+std::vector<std::vector<int> > Scheduler::permutations(int taskCount)
 {
-    std::vector<int> indices(machineCount);
+    std::vector<int> indices(taskCount);
     std::vector<std::vector<int> > permutationVec;
 
     std::iota(indices.begin(),indices.end(),0);
