@@ -1,0 +1,32 @@
+Tasks: 2, Machines: 2
+Task 0: 10 7 
+Task 1: 6 6 
+Permutation order:
+[0 1 ] , Cmax = 23
+[1 0 ] , Cmax = 23
+
+
+
+Tasks: 3, Machines: 3
+Task 0: 8 1 7 
+Task 1: 4 10 1 
+Task 2: 2 10 5 
+Permutation order:
+[0 1 2 ] , Cmax = 37
+[0 2 1 ] , Cmax = 31
+[1 0 2 ] , Cmax = 30
+[1 2 0 ] , Cmax = 36
+[2 0 1 ] , Cmax = 25
+[2 1 0 ] , Cmax = 30
+
+
+
+Tasks: 2, Machines: 2
+Task 0: 8 6 
+Task 1: 6 5 
+Permutation order:
+[0 1 ] , Cmax = 19
+[1 0 ] , Cmax = 20
+
+
+

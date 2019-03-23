@@ -1,0 +1,121 @@
+Tasks: 6, Machines: 2
+Task 0: 9 9 
+Task 1: 6 7 
+Task 2: 9 8 
+Task 3: 4 1 
+Task 4: 3 2 
+Task 5: 10 3 
+Johnsons order:
+[1 0 2 5 4 3 ] , Cmax = 42
+
+
+
+Tasks: 9, Machines: 2
+Task 0: 3 3 
+Task 1: 7 8 
+Task 2: 6 9 
+Task 3: 6 3 
+Task 4: 3 3 
+Task 5: 5 4 
+Task 6: 3 9 
+Task 7: 2 3 
+Task 8: 2 2 
+Johnsons order:
+[7 8 0 4 6 2 1 5 3 ] , Cmax = 46
+
+
+
+Tasks: 3, Machines: 2
+Task 0: 5 9 
+Task 1: 5 8 
+Task 2: 1 7 
+Johnsons order:
+[2 0 1 ] , Cmax = 25
+
+
+
+Tasks: 7, Machines: 2
+Task 0: 2 9 
+Task 1: 7 1 
+Task 2: 5 7 
+Task 3: 4 1 
+Task 4: 9 2 
+Task 5: 7 2 
+Task 6: 9 6 
+Johnsons order:
+[0 2 6 5 4 3 1 ] , Cmax = 44
+
+
+
+Tasks: 7, Machines: 2
+Task 0: 5 10 
+Task 1: 1 6 
+Task 2: 6 4 
+Task 3: 9 7 
+Task 4: 3 8 
+Task 5: 3 7 
+Task 6: 3 10 
+Johnsons order:
+[1 4 5 6 0 3 2 ] , Cmax = 53
+
+
+
+Tasks: 3, Machines: 2
+Task 0: 6 3 
+Task 1: 8 7 
+Task 2: 10 3 
+Johnsons order:
+[1 2 0 ] , Cmax = 27
+
+
+
+Tasks: 8, Machines: 2
+Task 0: 2 6 
+Task 1: 2 1 
+Task 2: 3 7 
+Task 3: 7 1 
+Task 4: 8 2 
+Task 5: 9 2 
+Task 6: 5 4 
+Task 7: 8 1 
+Johnsons order:
+[0 2 6 5 4 7 3 1 ] , Cmax = 45
+
+
+
+Tasks: 3, Machines: 2
+Task 0: 7 3 
+Task 1: 9 1 
+Task 2: 2 8 
+Johnsons order:
+[2 0 1 ] , Cmax = 19
+
+
+
+Tasks: 10, Machines: 2
+Task 0: 3 6 
+Task 1: 5 5 
+Task 2: 9 7 
+Task 3: 5 3 
+Task 4: 9 3 
+Task 5: 9 3 
+Task 6: 3 3 
+Task 7: 10 3 
+Task 8: 5 1 
+Task 9: 9 10 
+Johnsons order:
+[0 6 1 9 2 7 5 4 3 8 ] , Cmax = 68
+
+
+
+Tasks: 5, Machines: 2
+Task 0: 7 5 
+Task 1: 10 5 
+Task 2: 5 7 
+Task 3: 7 9 
+Task 4: 4 4 
+Johnsons order:
+[4 2 3 1 0 ] , Cmax = 38
+
+
+
