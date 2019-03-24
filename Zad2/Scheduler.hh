@@ -24,10 +24,15 @@ public:
 
     static bool comparePriorities(std::pair<int,int>&,std::pair<int,int>&);
 
+    std::vector<std::vector<int> > longestOutPath(std::vector<Task>&,Order);
+    std::vector<std::vector<int> > longestInPath(std::vector<Task>&,Order);
+
+    long lowestCmaxIndex(std::vector<std::vector<int> >,std::vector<std::vector<int> >, Task);
 private:
     Order insertIntoOrder(int,Order&);
     long extendNEHPickIdx(Order&,std::vector<Task>,ExtendedNEHType,long);
     int bestRemovalIdx(Order,std::vector<Task>,long);
+
 };
 
 

@@ -102,7 +102,10 @@ int main()
     */
 
     Controller controller("ta000");
-    Order ord = {0,1,2,3,4};
+//    controller.inpath();
+  //  controller.outpath();
+
+    //Order ord = {0,1,2,3,4};
 
     //std::cout<<"Longest op on critical: "<<FlowshopGraph::longestCriticalOperation(controller.tasks,ord)<<std::endl;
 
@@ -117,9 +120,9 @@ int main()
 
 
     std::cout<<"NEH order: [";
-    controller.printOrder(std::cout,ord);
+    controller.printOrder(std::cout,controller.nehOrder());
 
-    std::cout<<"Cmax = "<<controller.calculateTask(ord)<<std::endl;
+    //std::cout<<"Cmax = "<<controller.calculateTask(controller.nehOrder())<<std::endl;
 
 
     return 0;

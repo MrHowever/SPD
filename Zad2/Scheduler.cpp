@@ -10,6 +10,8 @@
 #include <numeric>
 #include <limits>
 #include <iostream>
+#include <algorithm>
+#include <a.out.h>
 
 //Funkcja zwracajaca wektor wszystkich permutacji kolejnosci zadan dla ilosci zadan podanej jako parametr
 std::vector<Order> Scheduler::permutations(int taskCount)
@@ -111,6 +113,8 @@ Order Scheduler::nehOrder(std::vector<Task> tasks)
     //Calculate NEH order
     Controller tempController(tasks);
     for(int i = 0; i < priorityOrder.size(); i++) {
+
+
         std::vector<int> cmaxArr(i+1);
         for(int j = 0; j < (i+1); j++) {
             Order tempOrder = currentOrder;
@@ -118,10 +122,18 @@ Order Scheduler::nehOrder(std::vector<Task> tasks)
             cmaxArr[j] = tempController.calculateTask(tempOrder);
             tempController.resetMachines();
         }
-
         long lowestCmaxIdx = std::distance(cmaxArr.begin(), std::min_element(cmaxArr.begin(),cmaxArr.end()));
+
+        long lowestCmaxIdx2 = 0;
+        if(currentOrder.size() > 1)
+            lowestCmaxIdx2 = lowestCmaxIndex(longestInPath(tasks,currentOrder),longestOutPath(tasks,currentOrder),tasks[priorityOrder[i]]);
+
+        std::cout<<"indx1 = "<<lowestCmaxIdx<<", indx2 = "<<lowestCmaxIdx2<<std::endl;
+
         currentOrder.insert(currentOrder.begin() + lowestCmaxIdx, priorityOrder[i]);
 
+        /*
+        //Extended NEH
         long shuffleIdx = extendNEHPickIdx(currentOrder,tasks,LONGEST,0);
 
         currentOrder.erase(std::remove(currentOrder.begin(), currentOrder.end(), shuffleIdx),currentOrder.end());
@@ -136,11 +148,99 @@ Order Scheduler::nehOrder(std::vector<Task> tasks)
 
         lowestCmaxIdx = std::distance(cmaxArr2.begin(), std::min_element(cmaxArr2.begin(),cmaxArr2.end()));
         currentOrder.insert(currentOrder.begin() + lowestCmaxIdx, shuffleIdx);
+         */
     }
 
-    return currentOrder
-    ;
+    return currentOrder;
 }
+
+long Scheduler::lowestCmaxIndex(std::vector<std::vector<int> > inPath, std::vector<std::vector<int> > outPath, Task task)
+{
+    int machines = task.machineTime.size();
+    std::vector<int> cmaxArr(inPath.size()+1);
+
+    for(int i = 0; i < machines; i++) {
+        std::vector<int> cVec(machines);
+        for(int j = 0; j < inPath[0].size(); j++) {
+            int inPathComp = i == 0 ? 0 : inPath[i-1][j];
+            int outPathComp = i == machines ? 0 : outPath[i][j];
+            int parentComp = j == 0 ? 0 : cVec[j-1];
+
+            cVec[j] = task.machineTime[j] + inPathComp + outPathComp + parentComp;
+        }
+
+        cmaxArr[i] = *(std::max_element(cVec.begin(),cVec.end()));
+    }
+
+    return std::distance(cmaxArr.begin(),std::max_element(cmaxArr.begin(),cmaxArr.end()));
+}
+
+std::vector<std::vector<int> > Scheduler::longestInPath(std::vector<Task>& tasks, Order order)
+{
+    std::vector<std::vector<int> > vec(tasks[0].machineTime.size());
+
+    for(auto& elem : vec)
+        elem = std::vector<int>(order.size());
+
+    vec[0][0] = tasks[order[0]].machineTime[0];
+
+    for(int i = 1; i < order.size(); i++)
+        vec[0][i] = tasks[order[i]].machineTime[0] + vec[0][i-1];
+
+    for(int i = 1; i < tasks[0].machineTime.size(); i++)
+        vec[i][0] = tasks[order[0]].machineTime[i] + vec[i-1][0];
+
+    for(int i = 1; i < order.size(); i++)
+        for(int j = 1; j < tasks[0].machineTime.size(); j++) {
+            int biggerVal = vec[j - 1][i] > vec[j][i - 1] ? vec[j-1][i] : vec[j][i-1];
+            vec[j][i] = biggerVal + tasks[order[i]].machineTime[j];
+        }
+
+    std::cout<<"Inpath:\n";
+    for(int i = 0; i < vec.size(); i++) {
+        for (int j = 0; j < order.size(); j++)
+            std::cout << vec[i][j] << " ";
+        std::cout<<std::endl;
+    }
+
+    return vec;
+}
+
+
+std::vector<std::vector<int> > Scheduler::longestOutPath(std::vector<Task>& tasks, Order order)
+{
+    std::vector<std::vector<int> > vec(tasks[0].machineTime.size());
+
+    int width = order.size()-1;
+    int height = tasks[0].machineTime.size() - 1;
+
+    for(auto& elem : vec)
+        elem = std::vector<int>(order.size());
+
+    vec[height][width] = tasks[order[width]].machineTime[height];
+
+    for(int i = width - 1; i >= 0; i--)
+        vec[height][i] = tasks[order[i]].machineTime[height] + vec[height][i+1];
+
+    for(int i = height - 1; i >= 0; i--)
+        vec[i][width] = tasks[order[width]].machineTime[i] + vec[i+1][width];
+
+    for(int i = width - 1; i >= 0; i--)
+        for(int j = height - 1; j >= 0; j--) {
+            int biggerVal = vec[j + 1][i] > vec[j][i + 1] ? vec[j+1][i] : vec[j][i+1];
+            vec[j][i] = biggerVal + tasks[order[i]].machineTime[j];
+        }
+
+    std::cout<<"Outpath:\n";
+    for(int i = 0; i < vec.size(); i++) {
+        for (int j = 0; j < order.size(); j++)
+            std::cout << vec[i][j] << " ";
+        std::cout<<std::endl;
+    }
+
+    return vec;
+}
+
 
 long Scheduler::extendNEHPickIdx(Order& order, std::vector<Task> tasks, ExtendedNEHType type, long ignoreIdx)
 {

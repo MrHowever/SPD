@@ -38,6 +38,28 @@ ostream
 ostream
 -
 
+/home/mrhowever/Programming/Projects/SPD3/Zad2/Scheduler.cpp
+Scheduler.hh
+/home/mrhowever/Programming/Projects/SPD3/Zad2/Scheduler.hh
+Task.hh
+/home/mrhowever/Programming/Projects/SPD3/Zad2/Task.hh
+Controller.hh
+/home/mrhowever/Programming/Projects/SPD3/Zad2/Controller.hh
+FlowshopGraph.hh
+/home/mrhowever/Programming/Projects/SPD3/Zad2/FlowshopGraph.hh
+algorithm
+-
+numeric
+-
+limits
+-
+iostream
+-
+algorithm
+-
+a.out.h
+-
+
 /home/mrhowever/Programming/Projects/SPD3/Zad2/Scheduler.hh
 vector
 -
@@ -47,18 +69,4 @@ Task.hh
 /home/mrhowever/Programming/Projects/SPD3/Zad2/Task.hh
 vector
 -
-
-/home/mrhowever/Programming/Projects/SPD3/Zad2/main.cpp
-iostream
--
-fstream
--
-Controller.hh
-/home/mrhowever/Programming/Projects/SPD3/Zad2/Controller.hh
-string
--
-random
--
-FlowshopGraph.hh
-/home/mrhowever/Programming/Projects/SPD3/Zad2/FlowshopGraph.hh
 

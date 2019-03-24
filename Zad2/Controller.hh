@@ -46,6 +46,8 @@ public:
     std::vector<Machine> machines;
     std::vector<Task> tasks;
 
+    void inpath() { std::vector<int> order = {0,2,1,3}; scheduler.longestInPath(tasks,order);}
+    void outpath() { std::vector<int> order = {0,2,1,3}; scheduler.longestOutPath(tasks,order);}
 };
 
 
