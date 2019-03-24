@@ -22,6 +22,11 @@ Controller::Controller(std::string filename)
     init(readFile(filename));
 }
 
+Controller::Controller(std::vector<Task> inputTasks) : tasks(inputTasks), machines(inputTasks[0].machineTime.size())
+{
+
+}
+
 //Funkcja czytajaca plik w formacie takim jak ta000
 DataArray Controller::readFile(std::string filename)
 {
@@ -80,7 +85,7 @@ Controller::Controller(unsigned int machineCount, unsigned int taskCount)
 //Funkcja obliczajaca czas wykonania zadan Cmax dla podanej jako parametr kolejnosci
 int Controller::calculateTask(Order order)
 {
-    for(std::vector<int>::size_type i = 0; i < tasks.size(); i++)
+    for(std::vector<int>::size_type i = 0; i < order.size(); i++)
     {
         for (std::vector<int>::size_type j = 0; j < machines.size(); j++) {
             if (j == 0)
@@ -218,4 +223,9 @@ void Controller::permVsJohnTest() {
 
         john3out << better << ", " << worse << "\n";
     }
+}
+
+Order Controller::nehOrder()
+{
+    return scheduler.nehOrder(tasks);
 }

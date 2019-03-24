@@ -8,33 +8,33 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug"/>
+				<Option working_dir="/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug"/>
+				<Option working_dir="/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SPD3">
-				<Option output="/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/SPD3" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug"/>
+				<Option output="/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/SPD3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/mrhowever/Programming/Projects/SPD3/."/>
+					<Add directory="/home/mrhowever/Programming/Projects/SPD3/Zad2/."/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -45,20 +45,20 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 SPD3"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 SPD3"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="SPD3/fast">
-				<Option output="/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/SPD3" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug"/>
+				<Option output="/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/SPD3" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
 				<Compiler>
-					<Add directory="/home/mrhowever/Programming/Projects/SPD3/."/>
+					<Add directory="/home/mrhowever/Programming/Projects/SPD3/Zad2/."/>
 					<Add directory="/usr/include/c++/7"/>
 					<Add directory="/usr/include/x86_64-linux-gnu/c++/7"/>
 					<Add directory="/usr/include/c++/7/backward"/>
@@ -69,51 +69,63 @@
 					<Add directory="/usr/include"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 SPD3/fast"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 SPD3/fast"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug"/>
+				<Option working_dir="/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j4 -f &quot;/home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Controller.cpp">
+		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad2/Controller.cpp">
 			<Option target="SPD3"/>
 		</Unit>
-		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Controller.hh">
+		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad2/Controller.hh">
 			<Option target="SPD3"/>
 		</Unit>
-		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Machine.cpp">
+		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad2/FlowshopGraph.cpp">
 			<Option target="SPD3"/>
 		</Unit>
-		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Machine.hh">
+		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad2/FlowshopGraph.hh">
 			<Option target="SPD3"/>
 		</Unit>
-		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Scheduler.cpp">
+		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad2/Machine.cpp">
 			<Option target="SPD3"/>
 		</Unit>
-		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Scheduler.hh">
+		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad2/Machine.hh">
 			<Option target="SPD3"/>
 		</Unit>
-		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Task.cpp">
+		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad2/Node.cpp">
 			<Option target="SPD3"/>
 		</Unit>
-		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Task.hh">
+		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad2/Node.hh">
 			<Option target="SPD3"/>
 		</Unit>
-		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/main.cpp">
+		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad2/Scheduler.cpp">
 			<Option target="SPD3"/>
 		</Unit>
-		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/CMakeLists.txt">
+		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad2/Scheduler.hh">
+			<Option target="SPD3"/>
+		</Unit>
+		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad2/Task.cpp">
+			<Option target="SPD3"/>
+		</Unit>
+		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad2/Task.hh">
+			<Option target="SPD3"/>
+		</Unit>
+		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad2/main.cpp">
+			<Option target="SPD3"/>
+		</Unit>
+		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad2/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

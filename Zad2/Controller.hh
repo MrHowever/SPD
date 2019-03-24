@@ -30,9 +30,11 @@ public:
     Controller(DataArray);
     Controller(unsigned int, unsigned int);
     Controller(std::string);
+    Controller(std::vector<Task>);
 
     int calculateTask(Order);
     Order johnsonOrder();
+    Order nehOrder();
     std::vector<Order> permutationOrder();
     void resetMachines();
     void printData(std::ostream&);

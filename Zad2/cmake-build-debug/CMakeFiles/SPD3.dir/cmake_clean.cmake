@@ -4,6 +4,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/SPD3.dir/main.cpp.o"
   "CMakeFiles/SPD3.dir/Task.cpp.o"
   "CMakeFiles/SPD3.dir/Scheduler.cpp.o"
+  "CMakeFiles/SPD3.dir/Node.cpp.o"
+  "CMakeFiles/SPD3.dir/FlowshopGraph.cpp.o"
   "SPD3.pdb"
   "SPD3"
 )

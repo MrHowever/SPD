@@ -6,5 +6,5 @@ CXX_FLAGS = -g   -std=gnu++14
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/home/mrhowever/Programming/Projects/SPD3/. 
+CXX_INCLUDES = -I/home/mrhowever/Programming/Projects/SPD3/Zad2/. 
 

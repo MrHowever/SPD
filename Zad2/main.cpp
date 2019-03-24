@@ -3,6 +3,7 @@
 #include "Controller.hh"
 #include <string>
 #include <random>
+#include "FlowshopGraph.hh"
 
 #define TEST_COUNT 10
 
@@ -85,6 +86,7 @@ void readTest(std::string filename)
 
 int main()
 {
+    /*
     std::ofstream file1("JohnsonsRule2Tests.txt");
     std::ofstream file2("JohnsonsRule3Tests.txt");
     std::ofstream file3("PermutationsTests.txt");
@@ -97,6 +99,28 @@ int main()
     Controller controller(1,1);
     //controller.calcTaskTime(11);
     controller.permVsJohnTest();
+    */
+
+    Controller controller("ta000");
+    Order ord = {0,1,2,3,4};
+
+    //std::cout<<"Longest op on critical: "<<FlowshopGraph::longestCriticalOperation(controller.tasks,ord)<<std::endl;
+
+    //std::cout<<"Longest sum on critical: "<<FlowshopGraph::longestSumOfCriticalOperations(controller.tasks,ord)<<std::endl;
+
+    //std::cout<<"Most on critical: "<<FlowshopGraph::mostCriticalOperations(controller.tasks,ord)<<std::endl;
+
+    //FlowshopGraph graph(controller.tasks,ord);
+    //graph.removeNonCriticalEdges();
+    //graph.reverseEdges();
+    //graph.printGraph(std::cout);
+
+
+    std::cout<<"NEH order: [";
+    controller.printOrder(std::cout,ord);
+
+    std::cout<<"Cmax = "<<controller.calculateTask(ord)<<std::endl;
+
 
     return 0;
 }

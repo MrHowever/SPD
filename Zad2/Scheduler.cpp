@@ -4,6 +4,8 @@
 
 #include "Scheduler.hh"
 #include "Task.hh"
+#include "Controller.hh"
+#include "FlowshopGraph.hh"
 #include <algorithm>
 #include <numeric>
 #include <limits>
@@ -81,4 +83,106 @@ Order Scheduler::johnsonsRule2(std::vector<Task> tasks)
     }
 
     return order;
+}
+
+Order Scheduler::nehOrder(std::vector<Task> tasks)
+{
+    std::vector<std::pair<int,int> > priorities(tasks.size());
+    std::vector<std::pair<int,int> >::iterator it = priorities.begin();
+    Order priorityOrder(tasks.size());
+    Order currentOrder;
+
+    //Calculate priority value for each task
+    for(int i = 0; i < tasks.size(); i++) {
+        for (auto& time : tasks[i].machineTime)
+            (*it).first += time;
+
+        (*it).second = i;
+        it++;
+    }
+
+    //Sort tasks by priority
+    std::sort(priorities.rbegin(), priorities.rend(), Scheduler::comparePriorities);      //Reverse iterators are used to accomplish descending order
+
+    for(int i = 0; i < priorities.size(); i++)
+        priorityOrder[i] = priorities[i].second;
+
+
+    //Calculate NEH order
+    Controller tempController(tasks);
+    for(int i = 0; i < priorityOrder.size(); i++) {
+        std::vector<int> cmaxArr(i+1);
+        for(int j = 0; j < (i+1); j++) {
+            Order tempOrder = currentOrder;
+            tempOrder.insert(tempOrder.begin()+j,priorityOrder[i]);
+            cmaxArr[j] = tempController.calculateTask(tempOrder);
+            tempController.resetMachines();
+        }
+
+        long lowestCmaxIdx = std::distance(cmaxArr.begin(), std::min_element(cmaxArr.begin(),cmaxArr.end()));
+        currentOrder.insert(currentOrder.begin() + lowestCmaxIdx, priorityOrder[i]);
+
+        long shuffleIdx = extendNEHPickIdx(currentOrder,tasks,LONGEST,0);
+
+        currentOrder.erase(std::remove(currentOrder.begin(), currentOrder.end(), shuffleIdx),currentOrder.end());
+
+        std::vector<int> cmaxArr2(i+1);
+        for(int j = 0; j < (i+1); j++) {
+            Order tempOrder = currentOrder;
+            tempOrder.insert(tempOrder.begin()+j,shuffleIdx);
+            cmaxArr2[j] = tempController.calculateTask(tempOrder);
+            tempController.resetMachines();
+        }
+
+        lowestCmaxIdx = std::distance(cmaxArr2.begin(), std::min_element(cmaxArr2.begin(),cmaxArr2.end()));
+        currentOrder.insert(currentOrder.begin() + lowestCmaxIdx, shuffleIdx);
+    }
+
+    return currentOrder
+    ;
+}
+
+long Scheduler::extendNEHPickIdx(Order& order, std::vector<Task> tasks, ExtendedNEHType type, long ignoreIdx)
+{
+    switch(type)
+    {
+        case LONGEST:
+            return FlowshopGraph::longestCriticalOperation(tasks,order,ignoreIdx);
+        case SUM:
+            return FlowshopGraph::longestSumOfCriticalOperations(tasks,order,ignoreIdx);
+        case BIGGEST:
+            return FlowshopGraph::mostCriticalOperations(tasks,order,ignoreIdx);
+        case REMOVAL:
+            return bestRemovalIdx(order,tasks,ignoreIdx);
+    }
+
+    return 0;
+}
+
+int Scheduler::bestRemovalIdx(Order order, std::vector<Task> tasks,long ignoreIdx)
+{
+    Controller controller(tasks);
+    std::vector<int> cmaxArr(order.size());
+    int currentCmax = controller.calculateTask(order);
+
+
+    for(int i = 0; i < order.size(); i++) {
+        Order tempOrder = order;
+        tempOrder.erase(tempOrder.begin() + i);
+        cmaxArr[i] = currentCmax - controller.calculateTask(tempOrder);
+    }
+
+    cmaxArr.erase(cmaxArr.begin() + ignoreIdx);
+
+    return (int) std::distance(cmaxArr.begin(), std::max_element(cmaxArr.begin(),cmaxArr.end()));
+}
+
+bool Scheduler::comparePriorities(std::pair<int,int>& first, std::pair<int,int>& second)
+{
+    return first.first <         second.first;
+}
+
+Order Scheduler::insertIntoOrder(int taskID, Order& order)
+{
+
 }

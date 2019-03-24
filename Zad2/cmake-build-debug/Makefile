@@ -48,10 +48,10 @@ RM = /home/mrhowever/Programs/clion-2018.3.4/bin/cmake/linux/bin/cmake -E remove
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/mrhowever/Programming/Projects/SPD3
+CMAKE_SOURCE_DIR = /home/mrhowever/Programming/Projects/SPD3/Zad2
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/mrhowever/Programming/Projects/SPD3/cmake-build-debug
+CMAKE_BINARY_DIR = /home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/CMakeFiles /home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/CMakeFiles /home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrhowever/Programming/Projects/SPD3/cmake-build-debug/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/mrhowever/Programming/Projects/SPD3/Zad2/cmake-build-debug/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -150,6 +150,33 @@ Controller.cpp.s:
 	$(MAKE) -f CMakeFiles/SPD3.dir/build.make CMakeFiles/SPD3.dir/Controller.cpp.s
 .PHONY : Controller.cpp.s
 
+FlowshopGraph.o: FlowshopGraph.cpp.o
+
+.PHONY : FlowshopGraph.o
+
+# target to build an object file
+FlowshopGraph.cpp.o:
+	$(MAKE) -f CMakeFiles/SPD3.dir/build.make CMakeFiles/SPD3.dir/FlowshopGraph.cpp.o
+.PHONY : FlowshopGraph.cpp.o
+
+FlowshopGraph.i: FlowshopGraph.cpp.i
+
+.PHONY : FlowshopGraph.i
+
+# target to preprocess a source file
+FlowshopGraph.cpp.i:
+	$(MAKE) -f CMakeFiles/SPD3.dir/build.make CMakeFiles/SPD3.dir/FlowshopGraph.cpp.i
+.PHONY : FlowshopGraph.cpp.i
+
+FlowshopGraph.s: FlowshopGraph.cpp.s
+
+.PHONY : FlowshopGraph.s
+
+# target to generate assembly for a file
+FlowshopGraph.cpp.s:
+	$(MAKE) -f CMakeFiles/SPD3.dir/build.make CMakeFiles/SPD3.dir/FlowshopGraph.cpp.s
+.PHONY : FlowshopGraph.cpp.s
+
 Machine.o: Machine.cpp.o
 
 .PHONY : Machine.o
@@ -176,6 +203,33 @@ Machine.s: Machine.cpp.s
 Machine.cpp.s:
 	$(MAKE) -f CMakeFiles/SPD3.dir/build.make CMakeFiles/SPD3.dir/Machine.cpp.s
 .PHONY : Machine.cpp.s
+
+Node.o: Node.cpp.o
+
+.PHONY : Node.o
+
+# target to build an object file
+Node.cpp.o:
+	$(MAKE) -f CMakeFiles/SPD3.dir/build.make CMakeFiles/SPD3.dir/Node.cpp.o
+.PHONY : Node.cpp.o
+
+Node.i: Node.cpp.i
+
+.PHONY : Node.i
+
+# target to preprocess a source file
+Node.cpp.i:
+	$(MAKE) -f CMakeFiles/SPD3.dir/build.make CMakeFiles/SPD3.dir/Node.cpp.i
+.PHONY : Node.cpp.i
+
+Node.s: Node.cpp.s
+
+.PHONY : Node.s
+
+# target to generate assembly for a file
+Node.cpp.s:
+	$(MAKE) -f CMakeFiles/SPD3.dir/build.make CMakeFiles/SPD3.dir/Node.cpp.s
+.PHONY : Node.cpp.s
 
 Scheduler.o: Scheduler.cpp.o
 
@@ -270,9 +324,15 @@ help:
 	@echo "... Controller.o"
 	@echo "... Controller.i"
 	@echo "... Controller.s"
+	@echo "... FlowshopGraph.o"
+	@echo "... FlowshopGraph.i"
+	@echo "... FlowshopGraph.s"
 	@echo "... Machine.o"
 	@echo "... Machine.i"
 	@echo "... Machine.s"
+	@echo "... Node.o"
+	@echo "... Node.i"
+	@echo "... Node.s"
 	@echo "... Scheduler.o"
 	@echo "... Scheduler.i"
 	@echo "... Scheduler.s"

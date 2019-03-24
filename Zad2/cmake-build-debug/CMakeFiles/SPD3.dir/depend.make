@@ -7,9 +7,24 @@ CMakeFiles/SPD3.dir/Controller.cpp.o: ../Machine.hh
 CMakeFiles/SPD3.dir/Controller.cpp.o: ../Scheduler.hh
 CMakeFiles/SPD3.dir/Controller.cpp.o: ../Task.hh
 
+CMakeFiles/SPD3.dir/FlowshopGraph.cpp.o: ../Controller.hh
+CMakeFiles/SPD3.dir/FlowshopGraph.cpp.o: ../FlowshopGraph.cpp
+CMakeFiles/SPD3.dir/FlowshopGraph.cpp.o: ../FlowshopGraph.hh
+CMakeFiles/SPD3.dir/FlowshopGraph.cpp.o: ../Machine.hh
+CMakeFiles/SPD3.dir/FlowshopGraph.cpp.o: ../Node.hh
+CMakeFiles/SPD3.dir/FlowshopGraph.cpp.o: ../Scheduler.hh
+CMakeFiles/SPD3.dir/FlowshopGraph.cpp.o: ../Task.hh
+
 CMakeFiles/SPD3.dir/Machine.cpp.o: ../Machine.cpp
 CMakeFiles/SPD3.dir/Machine.cpp.o: ../Machine.hh
 
+CMakeFiles/SPD3.dir/Node.cpp.o: ../Node.cpp
+CMakeFiles/SPD3.dir/Node.cpp.o: ../Node.hh
+
+CMakeFiles/SPD3.dir/Scheduler.cpp.o: ../Controller.hh
+CMakeFiles/SPD3.dir/Scheduler.cpp.o: ../FlowshopGraph.hh
+CMakeFiles/SPD3.dir/Scheduler.cpp.o: ../Machine.hh
+CMakeFiles/SPD3.dir/Scheduler.cpp.o: ../Node.hh
 CMakeFiles/SPD3.dir/Scheduler.cpp.o: ../Scheduler.cpp
 CMakeFiles/SPD3.dir/Scheduler.cpp.o: ../Scheduler.hh
 CMakeFiles/SPD3.dir/Scheduler.cpp.o: ../Task.hh
@@ -18,7 +33,9 @@ CMakeFiles/SPD3.dir/Task.cpp.o: ../Task.cpp
 CMakeFiles/SPD3.dir/Task.cpp.o: ../Task.hh
 
 CMakeFiles/SPD3.dir/main.cpp.o: ../Controller.hh
+CMakeFiles/SPD3.dir/main.cpp.o: ../FlowshopGraph.hh
 CMakeFiles/SPD3.dir/main.cpp.o: ../Machine.hh
+CMakeFiles/SPD3.dir/main.cpp.o: ../Node.hh
 CMakeFiles/SPD3.dir/main.cpp.o: ../Scheduler.hh
 CMakeFiles/SPD3.dir/main.cpp.o: ../Task.hh
 CMakeFiles/SPD3.dir/main.cpp.o: ../main.cpp
