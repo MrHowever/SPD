@@ -11,7 +11,7 @@
 #include <limits>
 #include <iostream>
 #include <algorithm>
-#include <a.out.h>
+//#include <a.out.h>
 
 //Funkcja zwracajaca wektor wszystkich permutacji kolejnosci zadan dla ilosci zadan podanej jako parametr
 std::vector<Order> Scheduler::permutations(int taskCount)
@@ -87,7 +87,7 @@ Order Scheduler::johnsonsRule2(std::vector<Task> tasks)
     return order;
 }
 
-Order Scheduler::nehOrder(std::vector<Task> tasks)
+Order Scheduler::nehOrder(std::vector<Task> tasks, bool acceleration)
 {
     std::vector<std::pair<int,int> > priorities(tasks.size());
     std::vector<std::pair<int,int> >::iterator it = priorities.begin();
@@ -113,42 +113,53 @@ Order Scheduler::nehOrder(std::vector<Task> tasks)
     //Calculate NEH order
     Controller tempController(tasks);
     for(int i = 0; i < priorityOrder.size(); i++) {
+        long lowestCmaxIdx = 0;
 
+        if(currentOrder.size() > 0) {
+            if (acceleration) {
+                lowestCmaxIdx = lowestCmaxIndex(longestInPath(tasks, currentOrder), longestOutPath(tasks, currentOrder),
+                                                tasks[priorityOrder[i]]);
+            }
+            else {
+                std::vector<int> cmaxArr(i + 1);
+                for (int j = 0; j < (i + 1); j++) {
+                    Order tempOrder = currentOrder;
+                    tempOrder.insert(tempOrder.begin() + j, priorityOrder[i]);
+                    cmaxArr[j] = tempController.calculateTask(tempOrder);
+                    tempController.resetMachines();
+                }
 
-        std::vector<int> cmaxArr(i+1);
-        for(int j = 0; j < (i+1); j++) {
-            Order tempOrder = currentOrder;
-            tempOrder.insert(tempOrder.begin()+j,priorityOrder[i]);
-            cmaxArr[j] = tempController.calculateTask(tempOrder);
-            tempController.resetMachines();
+                lowestCmaxIdx = std::distance(cmaxArr.begin(), std::min_element(cmaxArr.begin(), cmaxArr.end()));
+            }
         }
-        long lowestCmaxIdx = std::distance(cmaxArr.begin(), std::min_element(cmaxArr.begin(),cmaxArr.end()));
-
-        long lowestCmaxIdx2 = 0;
-        if(currentOrder.size() > 1)
-            lowestCmaxIdx2 = lowestCmaxIndex(longestInPath(tasks,currentOrder),longestOutPath(tasks,currentOrder),tasks[priorityOrder[i]]);
-
-        std::cout<<"indx1 = "<<lowestCmaxIdx<<", indx2 = "<<lowestCmaxIdx2<<std::endl;
 
         currentOrder.insert(currentOrder.begin() + lowestCmaxIdx, priorityOrder[i]);
 
         /*
         //Extended NEH
-        long shuffleIdx = extendNEHPickIdx(currentOrder,tasks,LONGEST,0);
+        if(currentOrder.size() > 100) {
+            long shuffleIdx = extendNEHPickIdx(currentOrder, tasks, LONGEST, 0);
 
-        currentOrder.erase(std::remove(currentOrder.begin(), currentOrder.end(), shuffleIdx),currentOrder.end());
+            std::cout<<"shuffleidx = "<<shuffleIdx<<" order size = "<<currentOrder.size()<<std::endl;
 
-        std::vector<int> cmaxArr2(i+1);
-        for(int j = 0; j < (i+1); j++) {
-            Order tempOrder = currentOrder;
-            tempOrder.insert(tempOrder.begin()+j,shuffleIdx);
-            cmaxArr2[j] = tempController.calculateTask(tempOrder);
-            tempController.resetMachines();
+            currentOrder.erase(std::remove(currentOrder.begin(), currentOrder.end(), shuffleIdx), currentOrder.end());
+
+            std::vector<int> cmaxArr2(i + 1);
+            for (int j = 0; j < (i + 1); j++) {
+                Order tempOrder = currentOrder;
+                tempOrder.insert(tempOrder.begin() + j, shuffleIdx);
+                cmaxArr2[j] = tempController.calculateTask(tempOrder);
+                tempController.resetMachines();
+            }
+
+            lowestCmaxIdx = lowestCmaxIndex(longestInPath(tasks,currentOrder),longestOutPath(tasks,currentOrder),tasks[priorityOrder[i]]);
+            currentOrder.insert(currentOrder.begin() + lowestCmaxIdx, shuffleIdx);
         }
 
-        lowestCmaxIdx = std::distance(cmaxArr2.begin(), std::min_element(cmaxArr2.begin(),cmaxArr2.end()));
-        currentOrder.insert(currentOrder.begin() + lowestCmaxIdx, shuffleIdx);
-         */
+        std::cout<<"Current order after neh= ";
+        for(auto& elem : currentOrder)
+            std::cout<<elem<<" ";
+*/
     }
 
     return currentOrder;
@@ -156,27 +167,35 @@ Order Scheduler::nehOrder(std::vector<Task> tasks)
 
 long Scheduler::lowestCmaxIndex(std::vector<std::vector<int> > inPath, std::vector<std::vector<int> > outPath, Task task)
 {
+    if(inPath.empty())
+        return 0;
+
     int machines = task.machineTime.size();
-    std::vector<int> cmaxArr(inPath.size()+1);
+    std::vector<int> cmaxArr(inPath[0].size()+1);
 
-    for(int i = 0; i < machines; i++) {
+    for(int j = 0; j < inPath[0].size() + 1; j++) {
         std::vector<int> cVec(machines);
-        for(int j = 0; j < inPath[0].size(); j++) {
-            int inPathComp = i == 0 ? 0 : inPath[i-1][j];
-            int outPathComp = i == machines ? 0 : outPath[i][j];
-            int parentComp = j == 0 ? 0 : cVec[j-1];
+        std::vector<int> cVecMax(machines);
+        for(int i = 0; i < machines; i++) {
+            int inPathComp = j == 0 ? 0 : inPath[i][j-1];
+            int outPathComp = j == inPath[0].size() ? 0 : outPath[i][j];
+            int parentComp = i == 0 ? 0 : cVec[i-1];
 
-            cVec[j] = task.machineTime[j] + inPathComp + outPathComp + parentComp;
+            cVec[i] = task.machineTime[i] + std::max(inPathComp,parentComp);
+            cVecMax[i] = cVec[i] + outPathComp;
         }
 
-        cmaxArr[i] = *(std::max_element(cVec.begin(),cVec.end()));
+        cmaxArr[j] = *(std::max_element(cVecMax.begin(),cVecMax.end()));
     }
 
-    return std::distance(cmaxArr.begin(),std::max_element(cmaxArr.begin(),cmaxArr.end()));
+    return std::distance(cmaxArr.begin(),std::min_element(cmaxArr.begin(),cmaxArr.end()));
 }
 
 std::vector<std::vector<int> > Scheduler::longestInPath(std::vector<Task>& tasks, Order order)
 {
+    if(order.empty())
+        return std::vector<std::vector<int> >();
+
     std::vector<std::vector<int> > vec(tasks[0].machineTime.size());
 
     for(auto& elem : vec)
@@ -196,19 +215,15 @@ std::vector<std::vector<int> > Scheduler::longestInPath(std::vector<Task>& tasks
             vec[j][i] = biggerVal + tasks[order[i]].machineTime[j];
         }
 
-    std::cout<<"Inpath:\n";
-    for(int i = 0; i < vec.size(); i++) {
-        for (int j = 0; j < order.size(); j++)
-            std::cout << vec[i][j] << " ";
-        std::cout<<std::endl;
-    }
-
     return vec;
 }
 
 
 std::vector<std::vector<int> > Scheduler::longestOutPath(std::vector<Task>& tasks, Order order)
 {
+    if(order.empty())
+        return std::vector<std::vector<int> >();
+
     std::vector<std::vector<int> > vec(tasks[0].machineTime.size());
 
     int width = order.size()-1;
@@ -230,13 +245,6 @@ std::vector<std::vector<int> > Scheduler::longestOutPath(std::vector<Task>& task
             int biggerVal = vec[j + 1][i] > vec[j][i + 1] ? vec[j+1][i] : vec[j][i+1];
             vec[j][i] = biggerVal + tasks[order[i]].machineTime[j];
         }
-
-    std::cout<<"Outpath:\n";
-    for(int i = 0; i < vec.size(); i++) {
-        for (int j = 0; j < order.size(); j++)
-            std::cout << vec[i][j] << " ";
-        std::cout<<std::endl;
-    }
 
     return vec;
 }
@@ -280,9 +288,4 @@ int Scheduler::bestRemovalIdx(Order order, std::vector<Task> tasks,long ignoreId
 bool Scheduler::comparePriorities(std::pair<int,int>& first, std::pair<int,int>& second)
 {
     return first.first <         second.first;
-}
-
-Order Scheduler::insertIntoOrder(int taskID, Order& order)
-{
-
 }

@@ -13,7 +13,7 @@ FlowshopGraph::FlowshopGraph(std::vector<Task> tasks, Order order) : taskCount(t
 
     //Create graph connections
     for(int i = 0; i < nodeCount; i++) {
-        nodes[i].task = order[i%tasks.size()];
+        nodes[i].task = order[i%order.size()];
         nodes[i].machine = i / tasks.size();
 
         if (i % tasks.size() != 0)

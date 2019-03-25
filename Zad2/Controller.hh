@@ -34,7 +34,7 @@ public:
 
     int calculateTask(Order);
     Order johnsonOrder();
-    Order nehOrder();
+    Order nehOrder(bool);
     std::vector<Order> permutationOrder();
     void resetMachines();
     void printData(std::ostream&);

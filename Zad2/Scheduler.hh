@@ -20,7 +20,7 @@ public:
     Order johnsonsRule(std::vector<Task>&);
     Order johnsonsRule2(std::vector<Task>);
     Order johnsonsRule3(std::vector<Task>);
-    Order nehOrder(std::vector<Task>);
+    Order nehOrder(std::vector<Task>,bool);
 
     static bool comparePriorities(std::pair<int,int>&,std::pair<int,int>&);
 
@@ -29,7 +29,6 @@ public:
 
     long lowestCmaxIndex(std::vector<std::vector<int> >,std::vector<std::vector<int> >, Task);
 private:
-    Order insertIntoOrder(int,Order&);
     long extendNEHPickIdx(Order&,std::vector<Task>,ExtendedNEHType,long);
     int bestRemovalIdx(Order,std::vector<Task>,long);
 

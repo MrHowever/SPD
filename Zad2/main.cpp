@@ -84,46 +84,47 @@ void readTest(std::string filename)
     std::cout << "\n\n\n";
 }
 
+void test(std::string filename)
+{
+    Controller controller(filename);
+
+    std::cout<<"NEH order: ";
+    controller.printOrder(std::cout,controller.nehOrder(false));
+    std::cout<<"NEH order accelerated: ";
+    controller.printOrder(std::cout,controller.nehOrder(true));
+    std::cout<<"Johnson order: ";
+    controller.printOrder(std::cout,controller.johnsonOrder());
+}
+
+void test(int i)
+{
+    Controller controller(i,100);
+
+    std::cout<<"NEH order: ";
+    controller.printOrder(std::cout,controller.nehOrder(false));
+    std::cout<<"NEH order accelerated: ";
+    controller.printOrder(std::cout,controller.nehOrder(true));
+    std::cout<<"Johnson order: ";
+    controller.printOrder(std::cout,controller.johnsonOrder());
+}
+
 int main()
 {
     /*
-    std::ofstream file1("JohnsonsRule2Tests.txt");
-    std::ofstream file2("JohnsonsRule3Tests.txt");
-    std::ofstream file3("PermutationsTests.txt");
-
-    printTest(file1,2,TEST_COUNT);
-    printTest(file2,3,TEST_COUNT);
-    printPermTest(file3,TEST_COUNT);
-    readTest(std::string("ta000"));
-
-    Controller controller(1,1);
-    //controller.calcTaskTime(11);
-    controller.permVsJohnTest();
-    */
-
-    Controller controller("ta000");
-//    controller.inpath();
-  //  controller.outpath();
-
-    //Order ord = {0,1,2,3,4};
-
-    //std::cout<<"Longest op on critical: "<<FlowshopGraph::longestCriticalOperation(controller.tasks,ord)<<std::endl;
-
-    //std::cout<<"Longest sum on critical: "<<FlowshopGraph::longestSumOfCriticalOperations(controller.tasks,ord)<<std::endl;
-
-    //std::cout<<"Most on critical: "<<FlowshopGraph::mostCriticalOperations(controller.tasks,ord)<<std::endl;
-
-    //FlowshopGraph graph(controller.tasks,ord);
-    //graph.removeNonCriticalEdges();
-    //graph.reverseEdges();
-    //graph.printGraph(std::cout);
-
-
-    std::cout<<"NEH order: [";
-    controller.printOrder(std::cout,controller.nehOrder());
-
-    //std::cout<<"Cmax = "<<controller.calculateTask(controller.nehOrder())<<std::endl;
-
+    test(std::string("ta000"));
+    test(std::string("ta001"));
+    test(std::string("ta002"));
+    test(std::string("ta003"));
+    test(std::string("ta004"));
+    test(std::string("ta005"));
+    test(std::string("ta006"));
+    test(std::string("ta007"));
+    test(std::string("ta008"));
+    test(std::string("ta009"));
+    test(std::string("ta010"));
+*/
+    test(2);
+    test(3);
 
     return 0;
 }

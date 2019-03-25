@@ -140,10 +140,17 @@ void Controller::printData(std::ostream& file)
 //Funkcja drukujaca przekazana jako parametr kolejnosc zadan oraz obliczony dla niej czas wykonania
 void Controller::printOrder(std::ostream& file, Order order)
 {
+    using namespace std::chrono;
+
     file<<"[";
     for(int i = 0; i < order.size(); i++)
         file<<order[i]<<" ";
+
+    auto start = high_resolution_clock::now();
     file<<"] , Cmax = "<<calculateTask(order)<<"\n";
+    auto stop = high_resolution_clock::now();
+    auto duration = duration_cast<microseconds>(stop-start);
+    file <<"Time = "<< duration.count()<<"\n";
 
     resetMachines();
 }
@@ -225,7 +232,7 @@ void Controller::permVsJohnTest() {
     }
 }
 
-Order Controller::nehOrder()
+Order Controller::nehOrder(bool acceleration)
 {
-    return scheduler.nehOrder(tasks);
+    return scheduler.nehOrder(tasks,acceleration);
 }
