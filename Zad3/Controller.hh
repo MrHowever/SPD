@@ -34,14 +34,9 @@ public:
 
     Order order();
     void setAlgorithm(AlgorithmType);
-
-    int calculateTask(Order);
+    int calculateCmax(Order);
 
     void resetMachines();
-    void printData(std::ostream&);
-    void printOrder(std::ostream&, Order);
-
-    void calcTaskTime(int);
 
     std::vector<Machine> machines;
     std::vector<Task> tasks;

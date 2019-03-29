@@ -45,7 +45,7 @@ Order NEHOrder::order(Tasks& tasks)
                 for (int j = 0; j < (i + 1); j++) {
                     Order tempOrder = currentOrder;
                     tempOrder.insert(tempOrder.begin() + j, priorityOrder[i]);
-                    cmaxArr[j] = tempController.calculateTask(tempOrder);
+                    cmaxArr[j] = tempController.calculateCmax(tempOrder);
                     tempController.resetMachines();
                 }
 
@@ -74,7 +74,7 @@ Order NEHOrder::extendedNEH(Order& currentOrder, Tasks& tasks, long ignoreIdx)
         for (int j = 0; j < (currentOrder.size() + 1); j++) {
             Order tempOrder = currentOrder;
             tempOrder.insert(tempOrder.begin() + j, shuffleIdx);
-            cmaxArr[j] = tempController.calculateTask(tempOrder);
+            cmaxArr[j] = tempController.calculateCmax(tempOrder);
             tempController.resetMachines();
         }
 
@@ -191,13 +191,13 @@ int NEHOrder::bestRemovalIdx(Order order, Tasks tasks,long ignoreIdx)
 {
     Controller controller(tasks);
     std::vector<int> cmaxArr(order.size());
-    int currentCmax = controller.calculateTask(order);
+    int currentCmax = controller.calculateCmax(order);
 
 
     for(int i = 0; i < order.size(); i++) {
         Order tempOrder = order;
         tempOrder.erase(tempOrder.begin() + i);
-        cmaxArr[i] = currentCmax - controller.calculateTask(tempOrder);
+        cmaxArr[i] = currentCmax - controller.calculateCmax(tempOrder);
     }
 
     cmaxArr.erase(cmaxArr.begin() + ignoreIdx);

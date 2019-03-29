@@ -94,7 +94,7 @@ Controller::Controller(unsigned int machineCount, unsigned int taskCount)
 }
 
 //Funkcja obliczajaca czas wykonania zadan Cmax dla podanej jako parametr kolejnosci
-int Controller::calculateTask(Order order)
+int Controller::calculateCmax(Order order)
 {
     for(std::vector<int>::size_type i = 0; i < order.size(); i++)
     {
@@ -120,69 +120,4 @@ void Controller::resetMachines()
 {
     for(auto& machine : machines)
         machine.timePassed = 0;
-}
-
-//Funkcja drukujaca ilosc zadan, maszyn oraz czasy wkonania poszczegolnych zadan na danych maszynach
-void Controller::printData(std::ostream& file)
-{
-    file << "Tasks: " <<tasks.size() <<", Machines: "<<machines.size() << "\n";
-
-    for(int j = 0; j <tasks.size(); j++) {
-        file  << "Task "<< j <<": ";
-        for (int k = 0; k < tasks[j].machineTime.size(); k++) {
-            file << tasks[j].machineTime[k] << " ";
-        }
-
-        file << "\n";
-    }
-}
-
-//Funkcja drukujaca przekazana jako parametr kolejnosc zadan oraz obliczony dla niej czas wykonania
-void Controller::printOrder(std::ostream& file, Order order)
-{
-    using namespace std::chrono;
-
-    file<<"[";
-    for(int i = 0; i < order.size(); i++)
-        file<<order[i]<<" ";
-
-    auto start = high_resolution_clock::now();
-    file<<"] , Cmax = "<<calculateTask(order)<<"\n";
-    auto stop = high_resolution_clock::now();
-    auto duration = duration_cast<microseconds>(stop-start);
-    file <<"Time = "<< duration.count()<<"\n";
-
-    resetMachines();
-}
-
-void Controller::calcTaskTime(int maxTasks)
-{
-    using namespace std::chrono;
-
-    std::ofstream times("AlgorithmTimes.txt");
-
-    for(int i = 2; i < maxTasks; i++)
-    {
-        auto start = high_resolution_clock::now();
-        scheduler.permutations(i);
-        auto stop = high_resolution_clock::now();
-        auto duration = duration_cast<microseconds>(stop-start);
-        times << duration.count() <<", ";
-
-        Controller temp(2,i);
-        start = high_resolution_clock::now();
-        temp.setAlgorithm(JOHNSON);
-        temp.order();
-        stop = high_resolution_clock::now();
-        duration = duration_cast<microseconds>(stop-start);
-        times << duration.count() <<", ";
-
-        Controller temp2(3,i);
-        start = high_resolution_clock::now();
-        temp2.setAlgorithm(JOHNSON);
-        temp2.order();
-        stop = high_resolution_clock::now();
-        duration = duration_cast<microseconds>(stop-start);
-        times << duration.count() <<"\n";
-    }
 }

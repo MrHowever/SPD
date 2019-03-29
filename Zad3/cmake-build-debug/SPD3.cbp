@@ -146,6 +146,12 @@
 		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad3/Task.hh">
 			<Option target="SPD3"/>
 		</Unit>
+		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad3/Tester.cpp">
+			<Option target="SPD3"/>
+		</Unit>
+		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad3/Tester.hh">
+			<Option target="SPD3"/>
+		</Unit>
 		<Unit filename="/home/mrhowever/Programming/Projects/SPD3/Zad3/main.cpp">
 			<Option target="SPD3"/>
 		</Unit>

@@ -393,6 +393,33 @@ Task.cpp.s:
 	$(MAKE) -f CMakeFiles/SPD3.dir/build.make CMakeFiles/SPD3.dir/Task.cpp.s
 .PHONY : Task.cpp.s
 
+Tester.o: Tester.cpp.o
+
+.PHONY : Tester.o
+
+# target to build an object file
+Tester.cpp.o:
+	$(MAKE) -f CMakeFiles/SPD3.dir/build.make CMakeFiles/SPD3.dir/Tester.cpp.o
+.PHONY : Tester.cpp.o
+
+Tester.i: Tester.cpp.i
+
+.PHONY : Tester.i
+
+# target to preprocess a source file
+Tester.cpp.i:
+	$(MAKE) -f CMakeFiles/SPD3.dir/build.make CMakeFiles/SPD3.dir/Tester.cpp.i
+.PHONY : Tester.cpp.i
+
+Tester.s: Tester.cpp.s
+
+.PHONY : Tester.s
+
+# target to generate assembly for a file
+Tester.cpp.s:
+	$(MAKE) -f CMakeFiles/SPD3.dir/build.make CMakeFiles/SPD3.dir/Tester.cpp.s
+.PHONY : Tester.cpp.s
+
 main.o: main.cpp.o
 
 .PHONY : main.o
@@ -459,6 +486,9 @@ help:
 	@echo "... Task.o"
 	@echo "... Task.i"
 	@echo "... Task.s"
+	@echo "... Tester.o"
+	@echo "... Tester.i"
+	@echo "... Tester.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

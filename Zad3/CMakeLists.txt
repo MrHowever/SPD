@@ -12,4 +12,4 @@ add_executable(SPD3
         Machine.hh
         main.cpp
         Task.cpp
-        Task.hh Scheduler.cpp Scheduler.hh Node.cpp Node.hh FlowshopGraph.cpp FlowshopGraph.hh OrderingAlgorithm.cpp OrderingAlgorithm.hh JohnsonOrder.cpp JohnsonOrder.hh NEHOrder.cpp NEHOrder.hh SimulatedAnnealing.cpp SimulatedAnnealing.hh)
+        Task.hh Scheduler.cpp Scheduler.hh Node.cpp Node.hh FlowshopGraph.cpp FlowshopGraph.hh OrderingAlgorithm.cpp OrderingAlgorithm.hh JohnsonOrder.cpp JohnsonOrder.hh NEHOrder.cpp NEHOrder.hh SimulatedAnnealing.cpp SimulatedAnnealing.hh Tester.cpp Tester.hh)

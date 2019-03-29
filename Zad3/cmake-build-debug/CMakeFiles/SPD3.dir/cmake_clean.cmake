@@ -10,6 +10,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/SPD3.dir/JohnsonOrder.cpp.o"
   "CMakeFiles/SPD3.dir/NEHOrder.cpp.o"
   "CMakeFiles/SPD3.dir/SimulatedAnnealing.cpp.o"
+  "CMakeFiles/SPD3.dir/Tester.cpp.o"
   "SPD3.pdb"
   "SPD3"
 )

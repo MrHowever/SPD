@@ -62,6 +62,14 @@ CMakeFiles/SPD3.dir/SimulatedAnnealing.cpp.o: ../Task.hh
 CMakeFiles/SPD3.dir/Task.cpp.o: ../Task.cpp
 CMakeFiles/SPD3.dir/Task.cpp.o: ../Task.hh
 
+CMakeFiles/SPD3.dir/Tester.cpp.o: ../Controller.hh
+CMakeFiles/SPD3.dir/Tester.cpp.o: ../Machine.hh
+CMakeFiles/SPD3.dir/Tester.cpp.o: ../OrderingAlgorithm.hh
+CMakeFiles/SPD3.dir/Tester.cpp.o: ../Scheduler.hh
+CMakeFiles/SPD3.dir/Tester.cpp.o: ../Task.hh
+CMakeFiles/SPD3.dir/Tester.cpp.o: ../Tester.cpp
+CMakeFiles/SPD3.dir/Tester.cpp.o: ../Tester.hh
+
 CMakeFiles/SPD3.dir/main.cpp.o: ../Controller.hh
 CMakeFiles/SPD3.dir/main.cpp.o: ../FlowshopGraph.hh
 CMakeFiles/SPD3.dir/main.cpp.o: ../Machine.hh

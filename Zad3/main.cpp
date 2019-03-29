@@ -9,6 +9,10 @@
 
 int main()
 {
+    Controller controller("ta000");
+    controller.setAlgorithm(NEH);
+    Order ord = controller.order();
+
 
     return 0;
 }
