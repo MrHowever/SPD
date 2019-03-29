@@ -137,7 +137,7 @@ Order Scheduler::nehOrder(std::vector<Task> tasks, bool acceleration)
 
         /*
         //Extended NEH
-        if(currentOrder.size() > 100) {
+        if(currentOrder.size() > 1) {
             long shuffleIdx = extendNEHPickIdx(currentOrder, tasks, LONGEST, 0);
 
             std::cout<<"shuffleidx = "<<shuffleIdx<<" order size = "<<currentOrder.size()<<std::endl;

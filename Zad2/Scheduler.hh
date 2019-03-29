@@ -11,6 +11,7 @@
 typedef std::vector<int> Order;
 
 enum ExtendedNEHType : unsigned int {LONGEST, SUM, BIGGEST, REMOVAL};
+enum OrderingAlgorithm : unsigned int {PERMUTATION,JOHNSON,NEH,ENEHL,ENEHS,ENEHB,ENEHR,ANNEAL};
 
 //Klasa obliczajaca kolejnosc zadan zgodnie z regula Johnsona lub wszystkie permutacje zadan
 
