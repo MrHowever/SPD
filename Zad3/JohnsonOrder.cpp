@@ -3,8 +3,10 @@
 //
 
 #include "JohnsonOrder.hh"
+#include <iostream>
+#include <limits>
 
-Order JohnsonsOrder::order(Tasks& tasks)
+Order JohnsonOrder::order(Tasks& tasks)
 {
     if(tasks[0].machineTime.size() > 3) {
         std::cerr << "Invalid number of machines\n";

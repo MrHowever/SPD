@@ -6,5 +6,5 @@
 
 Order SimulatedAnnealing::order(Tasks& tasks)
 {
-    
+
 }

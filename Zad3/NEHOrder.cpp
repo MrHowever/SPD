@@ -3,9 +3,11 @@
 //
 
 #include "NEHOrder.hh"
+#include "Controller.hh"
+#include "FlowshopGraph.hh"
+#include <algorithm>
 
-
-Order NEHOrder::order(std::vector<Task>& tasks)
+Order NEHOrder::order(Tasks& tasks)
 {
     std::vector<std::pair<int,int> > priorities(tasks.size());
     std::vector<std::pair<int,int> >::iterator it = priorities.begin();
@@ -22,7 +24,7 @@ Order NEHOrder::order(std::vector<Task>& tasks)
     }
 
     //Sort tasks by priority
-    std::sort(priorities.rbegin(), priorities.rend(), Scheduler::comparePriorities);      //Reverse iterators are used to accomplish descending order
+    std::sort(priorities.rbegin(), priorities.rend(), NEHOrder::comparePriorities);      //Reverse iterators are used to accomplish descending order
 
     for(int i = 0; i < priorities.size(); i++)
         priorityOrder[i] = priorities[i].second;
@@ -34,7 +36,7 @@ Order NEHOrder::order(std::vector<Task>& tasks)
         long lowestCmaxIdx = 0;
 
         if(currentOrder.size() > 0) {
-            if (acceleration) {
+            if (false) { //TODO
                 lowestCmaxIdx = lowestCmaxIndex(longestInPath(tasks, currentOrder), longestOutPath(tasks, currentOrder),
                                                 tasks[priorityOrder[i]]);
             }
@@ -53,31 +55,31 @@ Order NEHOrder::order(std::vector<Task>& tasks)
 
         currentOrder.insert(currentOrder.begin() + lowestCmaxIdx, priorityOrder[i]);
 
-        /*
-        //Extended NEH
-        if(currentOrder.size() > 1) {
-            long shuffleIdx = extendNEHPickIdx(currentOrder, tasks, LONGEST, 0);
+        // extendedNEH(currentOrder,tasks,lowestCmaxIdx);
+    }
 
-            std::cout<<"shuffleidx = "<<shuffleIdx<<" order size = "<<currentOrder.size()<<std::endl;
+    return currentOrder;
+}
 
-            currentOrder.erase(std::remove(currentOrder.begin(), currentOrder.end(), shuffleIdx), currentOrder.end());
+Order NEHOrder::extendedNEH(Order& currentOrder, Tasks& tasks, long ignoreIdx)
+{
+    Controller tempController(tasks);
+    long lowestCmaxIdx = 0;
 
-            std::vector<int> cmaxArr2(i + 1);
-            for (int j = 0; j < (i + 1); j++) {
-                Order tempOrder = currentOrder;
-                tempOrder.insert(tempOrder.begin() + j, shuffleIdx);
-                cmaxArr2[j] = tempController.calculateTask(tempOrder);
-                tempController.resetMachines();
-            }
+    if(currentOrder.size() > 1) {
+        long shuffleIdx = extendNEHPickIdx(currentOrder, tasks, LONGEST, ignoreIdx);
+        currentOrder.erase(std::remove(currentOrder.begin(), currentOrder.end(), shuffleIdx), currentOrder.end());
 
-            lowestCmaxIdx = lowestCmaxIndex(longestInPath(tasks,currentOrder),longestOutPath(tasks,currentOrder),tasks[priorityOrder[i]]);
-            currentOrder.insert(currentOrder.begin() + lowestCmaxIdx, shuffleIdx);
+        std::vector<int> cmaxArr(currentOrder.size());
+        for (int j = 0; j < (currentOrder.size() + 1); j++) {
+            Order tempOrder = currentOrder;
+            tempOrder.insert(tempOrder.begin() + j, shuffleIdx);
+            cmaxArr[j] = tempController.calculateTask(tempOrder);
+            tempController.resetMachines();
         }
 
-        std::cout<<"Current order after neh= ";
-        for(auto& elem : currentOrder)
-            std::cout<<elem<<" ";
-*/
+        lowestCmaxIdx = std::distance(cmaxArr.begin(), std::min_element(cmaxArr.begin(), cmaxArr.end()));
+        currentOrder.insert(currentOrder.begin() + lowestCmaxIdx, shuffleIdx);
     }
 
     return currentOrder;
@@ -168,7 +170,7 @@ std::vector<std::vector<int> > NEHOrder::longestOutPath(std::vector<Task>& tasks
 }
 
 
-long NEHOrder::extendNEHPickIdx(Order& order, std::vector<Task> tasks, ExtendedNEHType type, long ignoreIdx)
+long NEHOrder::extendNEHPickIdx(Order& order, Tasks tasks, ExtendedNEHType type, long ignoreIdx)
 {
     switch(type)
     {
@@ -185,7 +187,7 @@ long NEHOrder::extendNEHPickIdx(Order& order, std::vector<Task> tasks, ExtendedN
     return 0;
 }
 
-int NEHOrder::bestRemovalIdx(Order order, std::vector<Task> tasks,long ignoreIdx)
+int NEHOrder::bestRemovalIdx(Order order, Tasks tasks,long ignoreIdx)
 {
     Controller controller(tasks);
     std::vector<int> cmaxArr(order.size());

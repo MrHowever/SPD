@@ -27,6 +27,17 @@ Controller::Controller(std::vector<Task> inputTasks) : tasks(inputTasks), machin
 
 }
 
+
+Order Controller::order()
+{
+    return scheduler.order(tasks);
+}
+void Controller::setAlgorithm(AlgorithmType type)
+{
+    scheduler.setAlgorithm(type);
+}
+
+
 //Funkcja czytajaca plik w formacie takim jak ta000
 DataArray Controller::readFile(std::string filename)
 {
@@ -102,17 +113,6 @@ int Controller::calculateTask(Order order)
     return machines.back().timePassed;
 }
 
-//Funkcja zwracajaca wszystkie mozliwe permutacje kolejnosci zadan
-std::vector<Order> Controller::permutationOrder()
-{
-    return scheduler.permutations(tasks.size());
-}
-
-//Funkcja zwracajaca kolejnosc zadan wg zasady Johnsona
-Order Controller::johnsonOrder()
-{
-    return scheduler.johnsonsRule(tasks);
-}
 
 //Funkcja resetujaca czas zliczony na wszystkich maszynach, by kolejne obliczenia czasu na tych samych maszynach
 //sie nie kumulowaly
@@ -171,68 +171,18 @@ void Controller::calcTaskTime(int maxTasks)
 
         Controller temp(2,i);
         start = high_resolution_clock::now();
-        temp.johnsonOrder();
+        temp.setAlgorithm(JOHNSON);
+        temp.order();
         stop = high_resolution_clock::now();
         duration = duration_cast<microseconds>(stop-start);
         times << duration.count() <<", ";
 
         Controller temp2(3,i);
         start = high_resolution_clock::now();
-        temp2.johnsonOrder();
+        temp2.setAlgorithm(JOHNSON);
+        temp2.order();
         stop = high_resolution_clock::now();
         duration = duration_cast<microseconds>(stop-start);
         times << duration.count() <<"\n";
     }
-}
-
-void Controller::permVsJohnTest() {
-    std::ofstream john2out("PermutationVsJohn2Compare.txt");
-    std::ofstream john3out("PermutationVsJohn3Compare.txt");
-    int tasks = 8;
-
-    for (int j = 0; j < 50; j++) {
-        Controller john2(2, tasks);
-        Controller john3(3, tasks);
-
-        Order john2order = john2.johnsonOrder();
-        Order john3order = john3.johnsonOrder();
-        std::vector<Order> perm2order = john2.permutationOrder();
-        std::vector<Order> perm3order = john3.permutationOrder();
-
-        int cmaxjohn2 = john2.calculateTask(john2order);
-        john2.resetMachines();
-        int cmaxjohn3 = john3.calculateTask(john3order);
-        john3.resetMachines();
-
-        int better = 0, worse = 0;
-
-        for (int i = 0; i < perm2order.size(); i++) {
-            john2.resetMachines();
-             if (john2.calculateTask(perm2order[i]) < cmaxjohn2)
-                better++;
-            else
-                worse++;
-
-            john2.resetMachines();
-        }
-
-        john2out << better << ", " << worse << "\n";
-
-        better = 0;
-        worse = 0;
-        for (int i = 0; i < perm3order.size(); i++) {
-            if (john3.calculateTask(perm3order[i]) < cmaxjohn3)
-                better++;
-            else
-                worse++;
-            john3.resetMachines();
-        }
-
-        john3out << better << ", " << worse << "\n";
-    }
-}
-
-Order Controller::nehOrder(bool acceleration)
-{
-    return scheduler.nehOrder(tasks,acceleration);
 }

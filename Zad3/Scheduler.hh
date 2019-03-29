@@ -10,15 +10,15 @@
 #include "OrderingAlgorithm.hh"
 #include <memory>
 
-typedef std::vector<int> Order;
-
-enum ExtendedNEHType : unsigned int {LONGEST, SUM, BIGGEST, REMOVAL};
-//enum OrderingAlgorithm : unsigned int {PERMUTATION,JOHNSON,NEH,ENEHL,ENEHS,ENEHB,ENEHR,ANNEAL};
+enum AlgorithmType : unsigned int {JOHNSON, NEH, ENEHL, ENEHB, ENEHS, ENEHR, ANNEALING};
 
 class Scheduler {
-public:
+
     std::unique_ptr<OrderingAlgorithm> algorithm;
+
+public:
     Order order(Tasks&);
+    void setAlgorithm(AlgorithmType);
 
     std::vector<Order> permutations(int);
 };

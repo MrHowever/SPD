@@ -7,12 +7,20 @@
 
 #include "OrderingAlgorithm.hh"
 
-class NEHOrder : public OrderingAlgorithm {
-    Order order(Tasks&);
+enum ExtendedNEHType : unsigned int {NONE,LONGEST, SUM, BIGGEST, REMOVAL};
 
+class NEHOrder : public OrderingAlgorithm {
+public:
+    NEHOrder(ExtendedNEHType type = NONE) : type(type) {}
 
 private:
+    ExtendedNEHType type;
+
+    Order order(Tasks&);
+
     static bool comparePriorities(std::pair<int,int>&,std::pair<int,int>&);
+
+    Order extendedNEH(Order&, Tasks&,long);
 
     std::vector<std::vector<int> > longestOutPath(Tasks&,Order);
     std::vector<std::vector<int> > longestInPath(Tasks&,Order);
