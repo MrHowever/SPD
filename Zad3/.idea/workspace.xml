@@ -12,23 +12,132 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67d6414d-5935-45cd-9235-3b60db414b8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Tester.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tester.hh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/.idea/Zad2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/CMakeLists.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/Controller.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/Controller.hh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/FlowshopGraph.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/FlowshopGraph.hh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/JohnsonOrder.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/JohnsonOrder.hh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/Machine.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/Machine.hh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/NEHOrder.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/NEHOrder.hh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/Node.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/Node.hh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/OrderingAlgorithm.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/OrderingAlgorithm.hh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/Scheduler.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/Scheduler.hh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/SimulatedAnnealing.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/SimulatedAnnealing.hh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/Task.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/Task.hh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/Tester.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/Tester.hh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/AlgorithmTimes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/CXX.includecache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/Controller.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/DependInfo.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/FlowshopGraph.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/JohnsonOrder.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/Machine.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/NEHOrder.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/Node.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/OrderingAlgorithm.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/Scheduler.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/SimulatedAnnealing.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/Task.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/Tester.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/build.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/cmake_clean.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/depend.internal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/depend.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/flags.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/link.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/main.cpp.o" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/progress.make" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/JohnsonsRule2Tests.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/JohnsonsRule3Tests.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/Makefile" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/PermutationVsJohn2Compare.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/PermutationVsJohn3Compare.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/PermutationsTests.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/SPD3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/SPD3.cbp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/cmake_install.cmake" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta000" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta001" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta002" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta003" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta004" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta005" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta006" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta007" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta008" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta009" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta010" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test/AlgorithmTimes.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test/JohnsonsRule2Tests.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test/JohnsonsRule3Tests.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test/PermutationsTests.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test/SPD3" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test/ta000" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test1.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test10.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test11.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test12.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test13.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test14.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test2.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test3.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test4.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test5.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test6.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test7.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test8.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test9.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Zad4/ta000" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/CMakeLists.txt" beforeDir="false" afterPath="$PROJECT_DIR$/CMakeLists.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controller.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Controller.hh" beforeDir="false" afterPath="$PROJECT_DIR$/Controller.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/FlowshopGraph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/FlowshopGraph.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/NEHOrder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/NEHOrder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPD3.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPD3.dir/DependInfo.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPD3.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPD3.dir/build.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPD3.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPD3.dir/cmake_clean.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPD3.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPD3.dir/link.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPD3.dir/progress.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPD3.dir/progress.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/NEHOrder.hh" beforeDir="false" afterPath="$PROJECT_DIR$/NEHOrder.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Node.hh" beforeDir="false" afterPath="$PROJECT_DIR$/Node.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scheduler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Scheduler.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Scheduler.hh" beforeDir="false" afterPath="$PROJECT_DIR$/Scheduler.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tester.hh" beforeDir="false" afterPath="$PROJECT_DIR$/Tester.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPD3.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPD3.dir/depend.make" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/SPD3" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/SPD3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/SPD3.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/SPD3.cbp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/cmake-build-debug/ta000" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ta000" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
@@ -59,8 +168,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scheduler.hh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="315">
+              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
               <folding>
                 <element signature="e#97#114#0" expanded="true" />
               </folding>
@@ -69,31 +178,40 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller.hh">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="39" selection-start-line="39" selection-end-line="39" />
+            <state relative-caret-position="255">
+              <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tester.cpp">
+        <entry file="file://$PROJECT_DIR$/Controller.hh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="38" lean-forward="true" selection-start-line="38" selection-end-line="38" />
-              <folding>
-                <element signature="e#44#61#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="270">
+              <caret line="18" selection-start-line="18" selection-end-line="18" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Scheduler.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="444">
+              <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+              <folding>
+                <element signature="e#44#67#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/NEHOrder.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="199" column="59" selection-start-line="199" selection-start-column="59" selection-end-line="199" selection-end-column="59" />
+            <state relative-caret-position="3270">
+              <caret line="218" selection-start-line="218" selection-end-line="218" />
               <folding>
                 <element signature="e#44#66#0" expanded="true" />
               </folding>
@@ -102,22 +220,49 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tester.hh">
+        <entry file="file://$PROJECT_DIR$/NEHOrder.hh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="210">
-              <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-              <folding>
-                <element signature="e#91#110#0" expanded="true" />
-              </folding>
+              <caret line="14" selection-start-line="14" selection-end-line="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Controller.cpp">
+        <entry file="file://$PROJECT_DIR$/Node.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="768">
-              <caret line="122" column="1" selection-start-line="122" selection-start-column="1" selection-end-line="122" selection-end-column="1" />
+            <state relative-caret-position="150">
+              <caret line="10" selection-start-line="10" selection-end-line="10" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/FlowshopGraph.hh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="495">
+              <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Node.hh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="420">
+              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tester.hh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+              <folding>
+                <element signature="e#91#110#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -133,24 +278,24 @@
         <option value="$PROJECT_DIR$/cmake-build-debug/FlowshopGraph.hh" />
         <option value="$PROJECT_DIR$/cmake-build-debug/FlowshopGraph.cpp" />
         <option value="$PROJECT_DIR$/Node.cpp" />
-        <option value="$PROJECT_DIR$/Node.hh" />
         <option value="$PROJECT_DIR$/FlowshopGraph.hh" />
-        <option value="$PROJECT_DIR$/FlowshopGraph.cpp" />
         <option value="$PROJECT_DIR$/OrderingAlgorithm.hh" />
         <option value="$PROJECT_DIR$/JohnsonOrder.hh" />
         <option value="$PROJECT_DIR$/cmake-build-debug/NEHOrder.hh" />
         <option value="$PROJECT_DIR$/SimulatedAnnealing.hh" />
         <option value="$PROJECT_DIR$/SimulatedAnnealing.cpp" />
-        <option value="$PROJECT_DIR$/Scheduler.hh" />
-        <option value="$PROJECT_DIR$/Scheduler.cpp" />
-        <option value="$PROJECT_DIR$/NEHOrder.hh" />
         <option value="$PROJECT_DIR$/JohnsonOrder.cpp" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Controller.hh" />
         <option value="$PROJECT_DIR$/Controller.cpp" />
-        <option value="$PROJECT_DIR$/Tester.hh" />
         <option value="$PROJECT_DIR$/Tester.cpp" />
+        <option value="$PROJECT_DIR$/Tester.hh" />
+        <option value="$PROJECT_DIR$/Node.hh" />
+        <option value="$PROJECT_DIR$/FlowshopGraph.cpp" />
         <option value="$PROJECT_DIR$/NEHOrder.cpp" />
+        <option value="$PROJECT_DIR$/NEHOrder.hh" />
+        <option value="$PROJECT_DIR$/Scheduler.hh" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Scheduler.cpp" />
       </list>
     </option>
   </component>
@@ -182,7 +327,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Zad4" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -228,23 +373,26 @@
       <workItem from="1553459890921" duration="9720000" />
       <workItem from="1553524571526" duration="10278000" />
       <workItem from="1553800237191" duration="157000" />
-      <workItem from="1553892567655" duration="6977000" />
+      <workItem from="1553892567655" duration="7657000" />
+      <workItem from="1553975565451" duration="13863000" />
+      <workItem from="1553993450305" duration="24000" />
+      <workItem from="1553993546362" duration="1317000" />
+      <workItem from="1554300069468" duration="113000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59345000" />
+    <option name="totallyTimeSpent" value="75342000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
-    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26177174" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28092578" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.30130294" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.262215" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -297,37 +445,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Node.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Node.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="2" selection-start-column="2" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FlowshopGraph.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#44#71#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FlowshopGraph.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Task.hh">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -365,30 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scheduler.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="30" column="16" selection-start-line="30" selection-start-column="16" selection-end-line="30" selection-end-column="16" />
-          <folding>
-            <element signature="e#44#67#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NEHOrder.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JohnsonOrder.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -399,37 +492,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scheduler.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <element signature="e#97#114#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Controller.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="768">
           <caret line="122" column="1" selection-start-line="122" selection-start-column="1" selection-end-line="122" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tester.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="36" selection-start-line="14" selection-start-column="36" selection-end-line="14" selection-end-column="36" />
-          <folding>
-            <element signature="e#91#110#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="39" selection-start-line="39" selection-end-line="39" />
         </state>
       </provider>
     </entry>
@@ -443,12 +509,94 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FlowshopGraph.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1965">
+          <caret line="131" column="4" selection-start-line="131" selection-start-column="4" selection-end-line="131" selection-end-column="4" />
+          <folding>
+            <element signature="e#44#71#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scheduler.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+          <folding>
+            <element signature="e#97#114#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" selection-start-line="18" selection-end-line="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/NEHOrder.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="199" column="59" selection-start-line="199" selection-start-column="59" selection-end-line="199" selection-end-column="59" />
+        <state relative-caret-position="3270">
+          <caret line="218" selection-start-line="218" selection-end-line="218" />
           <folding>
             <element signature="e#44#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NEHOrder.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" selection-start-line="10" selection-end-line="10" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FlowshopGraph.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Node.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tester.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+          <folding>
+            <element signature="e#91#110#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Scheduler.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="444">
+          <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+          <folding>
+            <element signature="e#44#67#0" expanded="true" />
           </folding>
         </state>
       </provider>

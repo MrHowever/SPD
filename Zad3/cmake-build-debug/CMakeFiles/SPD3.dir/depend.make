@@ -16,6 +16,7 @@ CMakeFiles/SPD3.dir/FlowshopGraph.cpp.o: ../Node.hh
 CMakeFiles/SPD3.dir/FlowshopGraph.cpp.o: ../OrderingAlgorithm.hh
 CMakeFiles/SPD3.dir/FlowshopGraph.cpp.o: ../Scheduler.hh
 CMakeFiles/SPD3.dir/FlowshopGraph.cpp.o: ../Task.hh
+CMakeFiles/SPD3.dir/FlowshopGraph.cpp.o: ../Tester.hh
 
 CMakeFiles/SPD3.dir/JohnsonOrder.cpp.o: ../JohnsonOrder.cpp
 CMakeFiles/SPD3.dir/JohnsonOrder.cpp.o: ../JohnsonOrder.hh
@@ -34,6 +35,7 @@ CMakeFiles/SPD3.dir/NEHOrder.cpp.o: ../Node.hh
 CMakeFiles/SPD3.dir/NEHOrder.cpp.o: ../OrderingAlgorithm.hh
 CMakeFiles/SPD3.dir/NEHOrder.cpp.o: ../Scheduler.hh
 CMakeFiles/SPD3.dir/NEHOrder.cpp.o: ../Task.hh
+CMakeFiles/SPD3.dir/NEHOrder.cpp.o: ../Tester.hh
 
 CMakeFiles/SPD3.dir/Node.cpp.o: ../Node.cpp
 CMakeFiles/SPD3.dir/Node.cpp.o: ../Node.hh
@@ -77,5 +79,6 @@ CMakeFiles/SPD3.dir/main.cpp.o: ../Node.hh
 CMakeFiles/SPD3.dir/main.cpp.o: ../OrderingAlgorithm.hh
 CMakeFiles/SPD3.dir/main.cpp.o: ../Scheduler.hh
 CMakeFiles/SPD3.dir/main.cpp.o: ../Task.hh
+CMakeFiles/SPD3.dir/main.cpp.o: ../Tester.hh
 CMakeFiles/SPD3.dir/main.cpp.o: ../main.cpp
 
