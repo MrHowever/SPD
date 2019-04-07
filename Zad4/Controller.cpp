@@ -9,6 +9,7 @@
 #include <string>
 #include <fstream>
 #include <chrono>
+#include "Tester.hh"
 
 //Konstruktor odczytujacy dane z wektorow
 Controller::Controller(DataArray input)

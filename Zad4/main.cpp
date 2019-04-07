@@ -22,10 +22,13 @@ int main(int argc, char** argv)
     */
 
     std::ifstream file("neh.data.txt");
+    std::ofstream ofile(std::string("output.data"));
     int taskCount = -1, machineCount = -1,val,nehResult;
     std::vector<int> machineTime;
 
     std::string dummy;
+
+    ofile<<"NEH Cmax:Annealing Cmax:Annealing time\n";
 
     for(int x = 0; x < 120; x++) {
         DataArray input;
@@ -60,10 +63,21 @@ int main(int argc, char** argv)
         for (int i = 0; i < 2; i++)             //Skip to next dataset
             getline(file, dummy);
 
+        for(auto& elem : nehOrder)
+            elem--;
+
+        /*
+         *                                                  TEST SECTION
+         */
+
         Controller controller(input);
         controller.setAlgorithm(ANNEALING);
-        std::cout<<"NEH Cmax = "<<nehResult<<" Annealing cmax = "<<controller.calculateCmax(controller.order())<<std::endl;
+        controller.setParams(SWAP,false,ALPHA,STANDARD,nehOrder,RANDOM,NO,0.9);
+        ofile<<nehResult<<","<<controller.calculateCmax(controller.order());
+        ofile<<","<<Tester::functionTime(controller,&Controller::order)<<std::endl;
     }
+
+
 
     return 0;
 }

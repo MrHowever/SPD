@@ -35,7 +35,7 @@ double Tester::functionTime(Controller& controller, Order (Controller::*orderPtr
     auto start = high_resolution_clock::now();
     (controller.*orderPtr)();
     auto stop = high_resolution_clock::now();
-    auto duration = duration_cast<milliseconds>(start - stop);
+    auto duration = duration_cast<milliseconds>(stop-start);
 
     return duration.count();
 }

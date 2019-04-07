@@ -4,6 +4,7 @@
 
 #include "SimulatedAnnealing.hh"
 #include "Controller.hh"
+#include "Tester.hh"
 #include <algorithm>
 #include <numeric>
 #include <random>

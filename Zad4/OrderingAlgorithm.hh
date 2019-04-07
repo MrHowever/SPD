@@ -17,7 +17,7 @@ enum NeighbourAlgorithmType : unsigned int {SWAP,INSERT,RAND};
 enum CoolingAlgorithm : unsigned int {ALPHA,ITERATION};
 enum ProbabilityAlgorithm : unsigned int {STANDARD,IGNOREBETTER};
 enum StartingPointType : unsigned int {RANDOM, NEHORDER};
-enum RestartingAlgorithm : unsigned int {FIXED,ENERGYDIFF,RANDOMRESTART,NO};
+enum RestartingAlgorithm : unsigned int {FIXED,ENERGYDIFF,NO,RANDOMRESTART};
 
 class OrderingAlgorithm {
     public:
