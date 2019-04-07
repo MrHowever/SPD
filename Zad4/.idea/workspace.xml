@@ -13,16 +13,14 @@
   <component name="ChangeListManager">
     <list default="true" id="67d6414d-5935-45cd-9235-3b60db414b8d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlowshopGraph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/FlowshopGraph.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NEHOrder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/NEHOrder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NEHOrder.hh" beforeDir="false" afterPath="$PROJECT_DIR$/NEHOrder.hh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Node.hh" beforeDir="false" afterPath="$PROJECT_DIR$/Node.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Controller.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Controller.hh" beforeDir="false" afterPath="$PROJECT_DIR$/Controller.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderingAlgorithm.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/OrderingAlgorithm.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/OrderingAlgorithm.hh" beforeDir="false" afterPath="$PROJECT_DIR$/OrderingAlgorithm.hh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scheduler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Scheduler.cpp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Scheduler.hh" beforeDir="false" afterPath="$PROJECT_DIR$/Scheduler.hh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tester.hh" beforeDir="false" afterPath="$PROJECT_DIR$/Tester.hh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPD3.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPD3.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/SPD3" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/SPD3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ta000" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ta000" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimulatedAnnealing.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SimulatedAnnealing.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SimulatedAnnealing.hh" beforeDir="false" afterPath="$PROJECT_DIR$/SimulatedAnnealing.hh" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
@@ -52,8 +50,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Scheduler.hh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+            <state relative-caret-position="219">
+              <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
               <folding>
                 <element signature="e#97#114#0" expanded="true" />
               </folding>
@@ -61,11 +59,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/main.cpp">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/SimulatedAnnealing.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
+              <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+              <folding>
+                <element signature="e#44#76#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -73,80 +74,62 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Controller.hh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="77">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="180">
+              <caret line="29" column="72" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Scheduler.cpp">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Controller.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="285">
-              <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+              <caret line="70" column="84" selection-start-line="70" selection-start-column="84" selection-end-line="70" selection-end-column="84" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/main.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
               <folding>
-                <element signature="e#44#67#0" expanded="true" />
+                <element signature="e#0#19#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NEHOrder.cpp">
+        <entry file="file://$PROJECT_DIR$/SimulatedAnnealing.hh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="458">
-              <caret line="218" selection-start-line="218" selection-end-line="218" />
+            <state relative-caret-position="315">
+              <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
               <folding>
-                <element signature="e#44#66#0" expanded="true" />
+                <element signature="e#115#146#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/NEHOrder.hh">
+        <entry file="file://$PROJECT_DIR$/OrderingAlgorithm.hh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Node.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FlowshopGraph.hh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
-              <caret line="33" column="63" selection-start-line="33" selection-start-column="63" selection-end-line="33" selection-end-column="63" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Node.hh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="8" selection-start-line="28" selection-start-column="8" selection-end-line="28" selection-end-column="8" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tester.hh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="11" selection-start-line="14" selection-start-column="11" selection-end-line="14" selection-end-column="11" />
+            <state relative-caret-position="250">
+              <caret line="19" column="74" lean-forward="true" selection-start-line="19" selection-start-column="74" selection-end-line="19" selection-end-column="74" />
               <folding>
-                <element signature="e#91#110#0" expanded="true" />
+                <element signature="e#113#130#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/OrderingAlgorithm.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="5" selection-start-line="5" selection-end-line="5" />
             </state>
           </provider>
         </entry>
@@ -163,23 +146,24 @@
         <option value="$PROJECT_DIR$/cmake-build-debug/FlowshopGraph.cpp" />
         <option value="$PROJECT_DIR$/Node.cpp" />
         <option value="$PROJECT_DIR$/FlowshopGraph.hh" />
-        <option value="$PROJECT_DIR$/OrderingAlgorithm.hh" />
         <option value="$PROJECT_DIR$/JohnsonOrder.hh" />
         <option value="$PROJECT_DIR$/cmake-build-debug/NEHOrder.hh" />
-        <option value="$PROJECT_DIR$/SimulatedAnnealing.hh" />
-        <option value="$PROJECT_DIR$/SimulatedAnnealing.cpp" />
         <option value="$PROJECT_DIR$/JohnsonOrder.cpp" />
-        <option value="$PROJECT_DIR$/Controller.hh" />
-        <option value="$PROJECT_DIR$/Controller.cpp" />
         <option value="$PROJECT_DIR$/Tester.cpp" />
         <option value="$PROJECT_DIR$/Tester.hh" />
         <option value="$PROJECT_DIR$/Node.hh" />
         <option value="$PROJECT_DIR$/FlowshopGraph.cpp" />
         <option value="$PROJECT_DIR$/NEHOrder.cpp" />
         <option value="$PROJECT_DIR$/NEHOrder.hh" />
-        <option value="$PROJECT_DIR$/Scheduler.hh" />
-        <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/Scheduler.cpp" />
+        <option value="$PROJECT_DIR$/main.cpp" />
+        <option value="$PROJECT_DIR$/Scheduler.hh" />
+        <option value="$PROJECT_DIR$/OrderingAlgorithm.cpp" />
+        <option value="$PROJECT_DIR$/Controller.cpp" />
+        <option value="$PROJECT_DIR$/Controller.hh" />
+        <option value="$PROJECT_DIR$/OrderingAlgorithm.hh" />
+        <option value="$PROJECT_DIR$/SimulatedAnnealing.cpp" />
+        <option value="$PROJECT_DIR$/SimulatedAnnealing.hh" />
       </list>
     </option>
   </component>
@@ -195,18 +179,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="SPD3" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Zad3" type="462c0819:PsiDirectoryNode" />
+              <item name="Zad4" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -261,17 +245,19 @@
       <workItem from="1553975565451" duration="13863000" />
       <workItem from="1553993450305" duration="24000" />
       <workItem from="1553993546362" duration="1317000" />
+      <workItem from="1554300193725" duration="5221000" />
+      <workItem from="1554550032029" duration="13746000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75229000" />
+    <option name="totallyTimeSpent" value="94196000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.27613726" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.2857143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -293,18 +279,18 @@
       <window_info anchor="right" id="Database" order="3" weight="0.32960895" />
     </layout>
     <layout-to-restore>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26177174" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2857143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32899022" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.262215" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Database Changes" order="7" />
-      <window_info active="true" anchor="bottom" id="Messages" order="8" visible="true" weight="0.32899022" />
+      <window_info anchor="bottom" id="Messages" order="8" visible="true" weight="0.32899022" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="11" />
@@ -312,7 +298,7 @@
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32960895" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -339,33 +325,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/OrderingAlgorithm.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="31" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding>
-            <element signature="e#113#130#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/OrderingAlgorithm.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SimulatedAnnealing.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" selection-start-line="8" selection-end-line="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/SimulatedAnnealing.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="24" selection-start-line="10" selection-start-column="24" selection-end-line="10" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/JohnsonOrder.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
@@ -373,13 +332,6 @@
           <folding>
             <element signature="e#44#70#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Controller.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="768">
-          <caret line="122" column="1" selection-start-line="122" selection-start-column="1" selection-end-line="122" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -400,6 +352,23 @@
           <folding>
             <element signature="e#44#71#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NEHOrder.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3270">
+          <caret line="218" selection-start-line="218" selection-end-line="218" />
+          <folding>
+            <element signature="e#44#66#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/NEHOrder.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -434,53 +403,80 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Controller.hh">
+    <entry file="file://$PROJECT_DIR$/Scheduler.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="77">
-          <caret line="18" selection-start-line="18" selection-end-line="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NEHOrder.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="458">
-          <caret line="218" selection-start-line="218" selection-end-line="218" />
-          <folding>
-            <element signature="e#44#66#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/NEHOrder.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        <state relative-caret-position="357">
+          <caret line="51" column="64" selection-start-line="51" selection-start-column="64" selection-end-line="51" selection-end-column="64" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Scheduler.hh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" column="11" selection-start-line="21" selection-start-column="11" selection-end-line="21" selection-end-column="11" />
+        <state relative-caret-position="219">
+          <caret line="18" column="4" selection-start-line="18" selection-start-column="4" selection-end-line="18" selection-end-column="4" />
           <folding>
             <element signature="e#97#114#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/main.cpp">
+    <entry file="file://$PROJECT_DIR$/OrderingAlgorithm.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" column="66" selection-start-line="17" selection-start-column="66" selection-end-line="17" selection-end-column="66" />
+        <state relative-caret-position="75">
+          <caret line="5" selection-start-line="5" selection-end-line="5" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Scheduler.cpp">
+    <entry file="file://$PROJECT_DIR$/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="63" column="43" selection-start-line="63" selection-start-column="43" selection-end-line="63" selection-end-column="43" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="29" column="72" selection-start-line="29" selection-start-column="72" selection-end-line="29" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Controller.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="93" column="25" selection-start-line="93" selection-start-column="25" selection-end-line="93" selection-end-column="25" />
+          <caret line="70" column="84" selection-start-line="70" selection-start-column="84" selection-end-line="70" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/OrderingAlgorithm.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="250">
+          <caret line="19" column="74" lean-forward="true" selection-start-line="19" selection-start-column="74" selection-end-line="19" selection-end-column="74" />
           <folding>
-            <element signature="e#44#67#0" expanded="true" />
+            <element signature="e#113#130#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimulatedAnnealing.hh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="45" column="22" lean-forward="true" selection-start-line="45" selection-start-column="22" selection-end-line="45" selection-end-column="22" />
+          <folding>
+            <element signature="e#115#146#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SimulatedAnnealing.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="32" column="37" lean-forward="true" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+          <folding>
+            <element signature="e#44#76#0" expanded="true" />
           </folding>
         </state>
       </provider>

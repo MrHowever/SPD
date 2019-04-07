@@ -14,9 +14,11 @@ enum AlgorithmType : unsigned int {JOHNSON, NEH, ENEHL, ENEHB, ENEHS, ENEHR, ANN
 
 class Scheduler {
 
-    std::unique_ptr<OrderingAlgorithm> algorithm;
 
 public:
+    std::unique_ptr<OrderingAlgorithm> algorithm;
+
+
     Order order(Tasks&);
     void setAlgorithm(AlgorithmType);
     static AlgorithmType toAlgorithmType(std::string);

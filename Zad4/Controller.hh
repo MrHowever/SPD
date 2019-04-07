@@ -26,6 +26,8 @@ class Controller {
     DataArray readFile(std::string);
 
 public:
+    void setParams(NeighbourAlgorithmType,bool,CoolingAlgorithm,ProbabilityAlgorithm,
+                   Order, StartingPointType, RestartingAlgorithm, double);
 
     Controller(DataArray);
     Controller(unsigned int, unsigned int);

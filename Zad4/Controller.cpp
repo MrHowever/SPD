@@ -64,6 +64,13 @@ DataArray Controller::readFile(std::string filename)
     return input;
 }
 
+void Controller::setParams(NeighbourAlgorithmType ntype, bool reqDiff, CoolingAlgorithm ctype,
+                            ProbabilityAlgorithm ptype, Order startPoint, StartingPointType stype,
+                            RestartingAlgorithm rtype, double alpha)
+{
+    scheduler.algorithm->setParams(ntype,reqDiff,ctype,ptype,startPoint,stype,rtype,alpha);
+}
+
 //Funkcja wypelniajaca wektory zadan i maszyn podanymi jako parametr wartosciami
 void Controller::init(DataArray input)
 {

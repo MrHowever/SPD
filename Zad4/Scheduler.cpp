@@ -49,7 +49,7 @@ void Scheduler::setAlgorithm(AlgorithmType type)
             break;
 
         case ANNEALING:
-            algorithm = std::make_unique<SimulatedAnnealing>();
+            algorithm = std::make_unique<SimulatedAnnealing>(0.9);
             break;
     }
 }
