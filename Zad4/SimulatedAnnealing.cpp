@@ -144,7 +144,6 @@ double SimulatedAnnealing::probability(int currentCost, int newCost, double temp
 
     switch(alg)
     {
-        case IGNOREBETTER:      //TODO
             return std::exp(-(newCost - currentCost) / temperature);
 
         case STANDARD:

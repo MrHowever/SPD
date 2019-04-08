@@ -11,16 +11,6 @@
 
 int main(int argc, char** argv)
 {
-/*
-    for(int i = 1; i < argc; i++) {
-        std::string str = argv[1];
-        Controller controller(str);
-        controller.setAlgorithm(Scheduler::toAlgorithmType(argv[2]));
-        Order ord = controller.order();
-        std::cout<<"Cmax = "<<controller.calculateCmax(ord);
-    }
-    */
-
     std::ifstream file("neh.data.txt");
     std::ofstream ofile(std::string("output.data"));
     int taskCount = -1, machineCount = -1,val,nehResult;
@@ -70,11 +60,13 @@ int main(int argc, char** argv)
          *                                                  TEST SECTION
          */
 
+        std::cout<<x<<std::endl;
+
         Controller controller(input);
         controller.setAlgorithm(ANNEALING);
         controller.setParams(SWAP,false,ALPHA,STANDARD,nehOrder,RANDOM,NO,0.9);
         ofile<<nehResult<<","<<controller.calculateCmax(controller.order());
-        ofile<<","<<Tester::functionTime(controller,&Controller::order)<<std::endl;
+	//        ofile<<","<<Tester::functionTime(controller,&Controller::order)<<std::endl;
     }
 
 
