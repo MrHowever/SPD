@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/mrhowever/Programming/Projects/SPD3/Zad5/FileReader.hh
+vector
+-
+string
+-
+Task.hh
+/home/mrhowever/Programming/Projects/SPD3/Zad5/Task.hh
+
+/home/mrhowever/Programming/Projects/SPD3/Zad5/Heap.hh
+vector
+-
+Task.hh
+/home/mrhowever/Programming/Projects/SPD3/Zad5/Task.hh
+FileReader.hh
+/home/mrhowever/Programming/Projects/SPD3/Zad5/FileReader.hh
+
+/home/mrhowever/Programming/Projects/SPD3/Zad5/Schrage.hh
+Task.hh
+/home/mrhowever/Programming/Projects/SPD3/Zad5/Task.hh
+FileReader.hh
+/home/mrhowever/Programming/Projects/SPD3/Zad5/FileReader.hh
+
+/home/mrhowever/Programming/Projects/SPD3/Zad5/Task.hh
+
+/home/mrhowever/Programming/Projects/SPD3/Zad5/main.cpp
+iostream
+-
+Schrage.hh
+/home/mrhowever/Programming/Projects/SPD3/Zad5/Schrage.hh
+FileReader.hh
+/home/mrhowever/Programming/Projects/SPD3/Zad5/FileReader.hh
+Heap.hh
+/home/mrhowever/Programming/Projects/SPD3/Zad5/Heap.hh
+
