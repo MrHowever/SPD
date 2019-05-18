@@ -7,7 +7,7 @@ int main(int argc, char** argv) {
 
     Schrage schrage(FileReader::readFile(std::string(argv[1])));
 
-    std::pair <Tasks,unsigned int> result = schrage.nlognPtmnOrder();
+    std::pair <Tasks,unsigned int> result = schrage.order();
     std::cout<<"ORDER:\n";
 
     for(auto& elem : result.first)

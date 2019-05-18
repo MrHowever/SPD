@@ -12,134 +12,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="67d6414d-5935-45cd-9235-3b60db414b8d" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/../Zad4/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/.idea/Zad2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/CMakeLists.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/Controller.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/Controller.hh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/FlowshopGraph.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/FlowshopGraph.hh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/JohnsonOrder.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/JohnsonOrder.hh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/Machine.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/Machine.hh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/NEHOrder.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/NEHOrder.hh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/Node.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/Node.hh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/OrderingAlgorithm.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/OrderingAlgorithm.hh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/Scheduler.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/Scheduler.hh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/SimulatedAnnealing.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/SimulatedAnnealing.hh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/Task.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/Task.hh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/Tester.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/Tester.hh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/AlgorithmTimes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CMakeCCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CMakeSystem.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/CMakeCCompilerId.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdC/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/CMakeCXXCompilerId.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/3.13.2/CompilerIdCXX/a.out" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/CMakeOutput.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/Makefile.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/Makefile2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/CXX.includecache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/Controller.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/DependInfo.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/FlowshopGraph.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/JohnsonOrder.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/Machine.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/NEHOrder.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/Node.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/OrderingAlgorithm.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/Scheduler.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/SimulatedAnnealing.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/Task.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/Tester.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/build.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/cmake_clean.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/depend.internal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/depend.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/flags.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/link.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/main.cpp.o" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/SPD3.dir/progress.make" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/TargetDirectories.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/clion-log.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/cmake.check_cache" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/feature_tests.bin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/feature_tests.c" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/feature_tests.cxx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/CMakeFiles/progress.marks" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/JohnsonsRule2Tests.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/JohnsonsRule3Tests.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/Makefile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/PermutationVsJohn2Compare.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/PermutationVsJohn3Compare.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/PermutationsTests.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/SPD3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/SPD3.cbp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/cmake_install.cmake" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta000" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta001" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta002" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta003" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta004" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta005" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta006" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta007" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta008" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta009" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/ta010" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test/AlgorithmTimes.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test/JohnsonsRule2Tests.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test/JohnsonsRule3Tests.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test/PermutationsTests.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test/SPD3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test/ta000" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test1.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test10.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test11.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test12.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test13.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test14.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test2.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test3.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test4.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test5.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test6.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test7.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test8.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/cmake-build-debug/test9.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Zad4/ta000" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FlowshopGraph.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/FlowshopGraph.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NEHOrder.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/NEHOrder.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NEHOrder.hh" beforeDir="false" afterPath="$PROJECT_DIR$/NEHOrder.hh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Node.hh" beforeDir="false" afterPath="$PROJECT_DIR$/Node.hh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scheduler.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Scheduler.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Scheduler.hh" beforeDir="false" afterPath="$PROJECT_DIR$/Scheduler.hh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tester.hh" beforeDir="false" afterPath="$PROJECT_DIR$/Tester.hh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPD3.dir/depend.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/SPD3.dir/depend.make" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/SPD3" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/SPD3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cmake-build-debug/ta000" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/ta000" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zad5/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Zad5/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zad5/FileReader.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Zad5/FileReader.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Zad5/Schrage.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Zad5/Schrage.cpp" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -378,16 +253,18 @@
       <workItem from="1553993450305" duration="24000" />
       <workItem from="1553993546362" duration="1317000" />
       <workItem from="1554300069468" duration="113000" />
+      <workItem from="1557500791907" duration="58000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75342000" />
+    <option name="totallyTimeSpent" value="75400000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="67" y="25" width="1299" height="743" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.28092578" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2857143" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />

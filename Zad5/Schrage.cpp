@@ -6,6 +6,7 @@
 #include "Heap.hh"
 #include <numeric>
 #include <iostream>
+#include <limits>
 
 std::pair<Tasks,unsigned int> Schrage::order()
 {

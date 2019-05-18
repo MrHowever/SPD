@@ -4,6 +4,7 @@
 
 #include "FileReader.hh"
 #include <fstream>
+#include <iostream>
 
 Tasks FileReader::readFile(std::string filename)
 {
@@ -13,6 +14,9 @@ Tasks FileReader::readFile(std::string filename)
     input >> rows;
     input >> cols;
 
+    std::cout<<"\n\nrows = "<<rows<<std::endl;
+    std::cout<<"\n\ncols = "<<cols<<std::endl;
+    
     for(unsigned int i = 0; i < rows; i++) {
             unsigned int r1,p1,q1;
             input >> r1;
