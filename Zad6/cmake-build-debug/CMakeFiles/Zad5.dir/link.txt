@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/Zad5.dir/main.cpp.o CMakeFiles/Zad5.dir/Task.cpp.o CMakeFiles/Zad5.dir/FileReader.cpp.o CMakeFiles/Zad5.dir/Schrage.cpp.o CMakeFiles/Zad5.dir/Heap.cpp.o CMakeFiles/Zad5.dir/Carlier.cpp.o  -o Zad5 
