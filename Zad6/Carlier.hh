@@ -7,20 +7,21 @@
 
 #include "Task.hh"
 #include "FileReader.hh"
+#include <mutex>
 
 class Carlier {
 
 public:
+    std::mutex permutation_lock;
+    std::mutex tasks_lock;
     Tasks bestPermutation;
-    Carlier(Tasks tasks1) : tasks(tasks1) {}
-    void order(unsigned int&);
+    Carlier() {}
+    void order(unsigned int&,Tasks&);
     int C_pi(Tasks,int);
     int b(Tasks,int);
     int a(Tasks,int,int);
     int c(Tasks,int,int);
-    Tasks tasks;
     int Cmax(Tasks);
-
 };
 
 

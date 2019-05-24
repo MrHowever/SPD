@@ -6,16 +6,19 @@
 
 int main(int argc, char** argv) {
 
-    Tasks input = FileReader::readFile(std::string(argv[1]));
-    Carlier carlier(input);
-    unsigned int UB = 9999;
-    carlier.order(UB);
+    for(int i = 1; i < argc; i++) {
+        Tasks input = FileReader::readFile(std::string(argv[i]));
+        Carlier carlier;
+        unsigned int UB = 9999;
+        carlier.order(UB, input);
 
-    printf("bestCmax = %d, Cmax = %d",carlier.Cmax(carlier.bestPermutation),
-                carlier.Cmax(carlier.tasks));
+        printf("%s Cmax = %d\n", argv[i], carlier.Cmax(carlier.bestPermutation));
 
-    std::cout<<"ORDER:\n";
+        std::cout << "ORDER:\n";
 
-    for(auto& elem : carlier.tasks)
-        std::cout<<elem.id<<", ";
+        for (auto &elem : carlier.bestPermutation)
+            std::cout << elem.id << ", ";
+
+        std::cout<<std::endl<<std::endl;
+    }
 }

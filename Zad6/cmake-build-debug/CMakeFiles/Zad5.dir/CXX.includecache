@@ -15,12 +15,18 @@ limits
 -
 tuple
 -
+iostream
+-
+thread
+-
 
 /home/mrhowever/Programming/Projects/SPD3/Zad6/Carlier.hh
 Task.hh
 /home/mrhowever/Programming/Projects/SPD3/Zad6/Task.hh
 FileReader.hh
 /home/mrhowever/Programming/Projects/SPD3/Zad6/FileReader.hh
+mutex
+-
 
 /home/mrhowever/Programming/Projects/SPD3/Zad6/FileReader.hh
 vector
