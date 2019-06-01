@@ -1,0 +1,11 @@
+/media/SharedDisk/Programming/RiderProjects/SPD/ORTools/bin/Debug/netcoreapp2.2/ORTools.deps.json
+/media/SharedDisk/Programming/RiderProjects/SPD/ORTools/bin/Debug/netcoreapp2.2/ORTools.runtimeconfig.json
+/media/SharedDisk/Programming/RiderProjects/SPD/ORTools/bin/Debug/netcoreapp2.2/ORTools.runtimeconfig.dev.json
+/media/SharedDisk/Programming/RiderProjects/SPD/ORTools/bin/Debug/netcoreapp2.2/ORTools.dll
+/media/SharedDisk/Programming/RiderProjects/SPD/ORTools/bin/Debug/netcoreapp2.2/ORTools.pdb
+/media/SharedDisk/Programming/RiderProjects/SPD/ORTools/obj/Debug/netcoreapp2.2/ORTools.csprojAssemblyReference.cache
+/media/SharedDisk/Programming/RiderProjects/SPD/ORTools/obj/Debug/netcoreapp2.2/ORTools.csproj.CoreCompileInputs.cache
+/media/SharedDisk/Programming/RiderProjects/SPD/ORTools/obj/Debug/netcoreapp2.2/ORTools.AssemblyInfoInputs.cache
+/media/SharedDisk/Programming/RiderProjects/SPD/ORTools/obj/Debug/netcoreapp2.2/ORTools.AssemblyInfo.cs
+/media/SharedDisk/Programming/RiderProjects/SPD/ORTools/obj/Debug/netcoreapp2.2/ORTools.dll
+/media/SharedDisk/Programming/RiderProjects/SPD/ORTools/obj/Debug/netcoreapp2.2/ORTools.pdb
